@@ -84,7 +84,7 @@ export default function Home() {
                 <a href="mailto:marcogara24@gmail.com"><Mail className="mr-2" /> Email</a>
               </Button>
               <Button asChild variant="outline">
-                <a href="#" target="_blank" rel="noopener noreferrer"><Github className="mr-2" /> GitHub</a>
+                <a href="https://github.com/marcogara" target="_blank" rel="noopener noreferrer"><Github className="mr-2" /> GitHub</a>
               </Button>
               <Button asChild variant="outline">
                 <a href="#" target="_blank" rel="noopener noreferrer"><Linkedin className="mr-2" /> LinkedIn</a>
