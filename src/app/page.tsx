@@ -28,7 +28,7 @@ const projects = [
     technologies: ["Java", "PostgreSQL", "HTML", "CSS", "JavaScript"],
     liveLink: "#",
     repoLink: "#",
-    image: "https://marcogara.github.io/MVP_saving_app.png",
+    image: "/MVP_saving_app.png",
     imageHint: "finance banking",
   },
   {
