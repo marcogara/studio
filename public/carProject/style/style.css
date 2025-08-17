@@ -1,121 +1,69 @@
 body {
-    background-color: #36454F;
-    color: #E0E0E0;
+    background: hsl(204 23% 26%);
+    color: hsl(210 40% 98%);
     font-family: 'Roboto Mono', monospace;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.header {
-    width: 100%;
-    background-color: #2F4F4F;
-    padding: 1rem 0;
-    border-bottom: 1px solid #008080;
-}
-
-.header .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: #E0E0E0;
-    text-decoration: none;
-}
-
-.logo svg {
-    color: #008080;
-}
-
-.back-link {
-    color: #E0E0E0;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border: 1px solid #008080;
-    border-radius: 0.5rem;
-    transition: background-color 0.2s, color 0.2s;
-}
-
-.back-link:hover {
-    background-color: #008080;
-    color: #2F4F4F;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 2rem auto;
-}
-
-.project_car {
-    background-color: #2F4F4F;
-    border: 1px solid #008080;
-    border-radius: 0.5rem;
-    padding: 2rem;
+    justify-content: center;
+    min-height: 100vh;
     text-align: center;
 }
 
-h1 {
-    color: #FFFFFF;
-    margin-top: 0;
+.project_car {
+    margin-bottom: 20px;
 }
 
-p {
-    color: #A9A9A9;
-    max-width: 60ch;
-    margin: 1rem auto;
+.project_car h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.project_car h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.project_car p {
+    font-size: 1.1em;
+    margin-bottom: 1.5em;
+    color: hsl(210 40% 80%);
 }
 
 .car {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
-    gap: 1rem;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 #carCanvas {
-    background: #5A5A5A;
+    background: #666;
     border-radius: 0.5rem;
 }
 
 #networkCanvas {
-    background: #2c2c2c;
+    background: #333;
     border-radius: 0.5rem;
 }
 
 .car-buttons {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 10px;
 }
 
 .car-buttons button {
-    background-color: #4CAF50;
-    color: white;
     border: none;
+    background: hsl(180 25% 30%);
+    color: hsl(210 40% 98%);
     padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
     border-radius: 5px;
-    border: 1px solid #3e8e41;
+    cursor: pointer;
+    font-size: 1.5em;
 }
 
 .car-buttons button:hover {
-    background-color: #45a049;
+    background: hsl(180 100% 25%);
 }
