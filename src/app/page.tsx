@@ -24,6 +24,15 @@ const projects = [
     imageHint: "finance banking",
   },
   {
+    title: "Java Adventures for Kids",
+    description: "A fun, interactive book designed to teach children the fundamentals of Java programming with easy-to-understand examples and copy-paste code snippets.",
+    technologies: ["Java", "Education"],
+    liveLink: "#",
+    repoLink: "#",
+    image: "/codeForKidsJAVA.png",
+    imageHint: "book code kids",
+  },
+  {
     title: "Cyber-Store",
     description: "An e-commerce platform for futuristic gadgets, built with a focus on performance and a seamless user experience.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Firebase"],
