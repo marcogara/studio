@@ -4,33 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neural Network Car Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1><a href="/">Portfolio</a></h1>
-    </header>
-    <main>
-        <section id="project_car" class="project_car">
-            <h2>Neural network Car Project</h2>
-            <p>Self-driving car JavaScript project. The car is driving autonomously, and it's driven by a neural network coded from scratch in JS.</p>
-            <div class="car-container">
-                <canvas id="carCanvas"></canvas>
-                <div id="verticalButtons">
-                    <button onclick="save()">💾</button>
-                    <button onclick="discard()">🗑️</button>
-                </div>
-                <canvas id="networkCanvas"></canvas>
+    <section id="project_car" class="project_car">
+        <h2>Neural network Car Project</h2>
+        <p>Selfdriving car JavaScript project.</p>
+        <div class="car">
+            <canvas id="carCanvas"></canvas>
+            <div id="verticalButtons" class="car-buttons">
+                <button onclick="save()">💾</button>
+                <button onclick="discard()">🗑️</button>
             </div>
-        </section>
-    </main>
-    <script src="js/network.js" defer></script>
-    <script src="js/sensor.js" defer></script>
-    <script src="js/utils.js" defer></script>
-    <script src="js/road.js" defer></script>
-    <script src="js/controls.js" defer></script>
-    <script src="js/car.js" defer></script>
-    <script src="js/visualizer.js" defer></script>
-    <script src="js/main.js" defer></script>
+            <canvas id="networkCanvas"></canvas>
+        </div>
+        <script src="js/visualizer.js" defer></script>
+        <script src="js/sensor.js" defer></script>
+        <script src="js/utils.js" defer></script>
+        <script src="js/network.js" defer></script>
+        <script src="js/road.js" defer></script>
+        <script src="js/car.js" defer></script>
+        <script src="js/controls.js" defer></script>
+        <script src="js/main.js" defer></script>
+    </section>
 </body>
 </html>
