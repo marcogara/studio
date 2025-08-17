@@ -50,6 +50,7 @@ const projects = [
     repoLink: "#",
     image: "/IHK/320px-IHK_Berlin_Logo.svg.png",
     imageHint: "education certificate",
+    isLogo: true,
   },
   {
     title: "Code-Collab",
@@ -175,14 +176,15 @@ export default function Home() {
               {projects.map((project: any, index) => (
                 <Card key={index} className="flex flex-col overflow-hidden hover:border-primary/50 transition-colors duration-300">
                   <CardHeader className="p-0">
-                     <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={600}
-                      height={400}
-                      className="w-full h-48 object-cover"
-                      data-ai-hint={project.imageHint}
-                    />
+                    <div className="w-full h-48 relative bg-white">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className={project.isLogo ? "object-contain p-8" : "object-cover"}
+                        data-ai-hint={project.imageHint}
+                      />
+                    </div>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col p-6">
                     <CardTitle className="text-xl font-bold mb-2 font-headline">{project.title}</CardTitle>
