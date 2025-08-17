@@ -44,7 +44,7 @@ const projects = [
   },
   {
     title: "IHK Project",
-    description: "Description for the IHK Project.",
+    description: "Developed a feature for the SyABO web app, a system used by public transport companies to manage subscriber and student data. This project involved creating a tool to define and manage data exchange conventions with various data suppliers via CSV file interfaces.",
     technologies: ["Java", "PostgreSQL", "JSP", "JSF"],
     liveLink: "/IHK/IHK_Importprofil-Tool.pdf",
     liveLinkText: "To Presentation",
@@ -228,5 +228,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
