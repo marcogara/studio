@@ -34,13 +34,13 @@ const projects = [
     imageHint: "book code kids",
   },
   {
-    title: "Cyber-Store",
-    description: "An e-commerce platform for futuristic gadgets, built with a focus on performance and a seamless user experience.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Firebase"],
+    title: "Neural network Car Project",
+    description: "Self-driving car JavaScript project. The car is driving autonomously, and it's driven by a neural network coded from scratch in JS.",
+    technologies: ["JavaScript", "Neural Network"],
     liveLink: "#",
     repoLink: "#",
-    image: "https://placehold.co/600x400.png",
-    imageHint: "ecommerce tech",
+    image: "/carAI.png",
+    imageHint: "neural network car",
   },
   {
     title: "Code-Collab",
@@ -215,5 +215,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
