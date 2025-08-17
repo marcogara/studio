@@ -27,7 +27,7 @@ const projects = [
     description: "A banking application for managing interest rates, built with a robust Java backend and a classic web frontend.",
     technologies: ["Java", "PostgreSQL", "HTML", "CSS", "JavaScript"],
     liveLink: "/smart-interest-app/index.html",
-    repoLink: "https://github.com/marcogara",
+    repoLink: "https://github.com/marcogara/interest-optimisation-account",
     image: "/MVP_saving_app.png",
     imageHint: "finance banking",
   },
