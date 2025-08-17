@@ -46,7 +46,7 @@ const projects = [
     title: "IHK Project",
     description: "Description for the IHK Project.",
     technologies: ["Tech 1", "Tech 2"],
-    liveLink: "#",
+    liveLink: "/IHK/doku.pdf",
     repoLink: "#",
     image: "/IHK/320px-IHK_Berlin_Logo.svg.png",
     imageHint: "education certificate",
@@ -226,3 +226,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
