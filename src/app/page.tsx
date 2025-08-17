@@ -47,7 +47,9 @@ const projects = [
     description: "Description for the IHK Project.",
     technologies: ["Tech 1", "Tech 2"],
     liveLink: "/IHK/doku.pdf",
+    liveLinkText: "To Presentation",
     repoLink: "#",
+    repoLinkText: "To Documentation",
     image: "/IHK/320px-IHK_Berlin_Logo.svg.png",
     imageHint: "education certificate",
     isLogo: true,
@@ -196,7 +198,7 @@ export default function Home() {
                   <CardFooter className="p-6 bg-card-foreground/5">
                     <div className="w-full flex justify-between items-center gap-4">
                        <Button asChild variant="outline" size="sm">
-                        <a href={project.repoLink} target="_blank" rel="noopener noreferrer"><Github className="mr-2 h-4 w-4" /> Repo</a>
+                        <a href={project.repoLink} target="_blank" rel="noopener noreferrer"><Github className="mr-2 h-4 w-4" /> {project.repoLinkText || 'Repo'}</a>
                       </Button>
                        <Button asChild size="sm">
                         <a href={project.liveLink} target="_blank" rel="noopener noreferrer">{project.liveLinkText || 'Live Demo'} <ExternalLink className="ml-2 h-4 w-4" /></a>
