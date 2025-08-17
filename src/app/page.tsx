@@ -223,7 +223,7 @@ export default function Home() {
       </main>
 
       <footer className="bg-card text-center py-4 mt-auto">
-        <p className="text-muted-foreground">© {year ?? new Date().getFullYear()} Marco Gara. All Rights Reserved.</p>
+        <p className="text-muted-foreground">© {year ?? new Date().getFullYear()} Marco Garagna. All Rights Reserved.</p>
       </footer>
     </div>
   );
