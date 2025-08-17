@@ -46,7 +46,7 @@ const projects = [
     title: "IHK Project",
     description: "Developed a feature for the SyABO web app, a system used by public transport companies to manage subscriber and student data. This project involved creating a tool to define and manage data exchange conventions with various data suppliers via CSV file interfaces.",
     technologies: ["Java", "PostgreSQL", "JSP", "JSF"],
-    liveLink: "/IHK/IHK_Importprofil-Tool.pdf",
+    liveLink: "/IHK/IHK_Importprofil-Tool.pptx",
     liveLinkText: "To Presentation",
     repoLink: "/IHK/doku.pdf",
     repoLinkText: "To Documentation",
