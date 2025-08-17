@@ -23,6 +23,15 @@ const toolsAndTechnologies = [
 
 const projects = [
   {
+    title: "Smart Interest App",
+    description: "A banking application for managing interest rates, built with a robust Java backend and a classic web frontend.",
+    technologies: ["Java", "PostgreSQL", "HTML", "CSS", "JavaScript"],
+    liveLink: "#",
+    repoLink: "#",
+    image: "https://placehold.co/600x400.png",
+    imageHint: "finance banking",
+  },
+  {
     title: "Cyber-Store",
     description: "An e-commerce platform for futuristic gadgets, built with a focus on performance and a seamless user experience.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Firebase"],
