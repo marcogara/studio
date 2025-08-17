@@ -45,7 +45,7 @@ const projects = [
   {
     title: "IHK Project",
     description: "Description for the IHK Project.",
-    technologies: ["Tech 1", "Tech 2"],
+    technologies: ["Java", "PostgreSQL", "JSP", "JSF"],
     liveLink: "/IHK/IHK_Importprofil-Tool.pdf",
     liveLinkText: "To Presentation",
     repoLink: "/IHK/doku.pdf",
