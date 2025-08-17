@@ -7,22 +7,19 @@ import { Header } from "@/components/header";
 import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
 import { ContactForm } from "@/components/contact-form";
 import { Separator } from "@/components/ui/separator";
 import { Quote } from "@/components/quote";
 import { useState, useEffect } from "react";
 
-const skills = [
-  { name: "JavaScript (ES6+)", proficiency: 95 },
-  { name: "TypeScript", proficiency: 90 },
-  { name: "React & Next.js", proficiency: 95 },
-  { name: "Node.js & Express", proficiency: 85 },
-  { name: "HTML5 & CSS3", proficiency: 98 },
-  { name: "Tailwind CSS", proficiency: 90 },
-  { name: "Firebase", proficiency: 80 },
-  { name: "SQL & NoSQL", proficiency: 85 },
+const languagesAndFrameworks = [
+  "Java", "C/C++", "Python", "HTML/CSS/JS", "Spring", "AngularJS"
 ];
+
+const toolsAndTechnologies = [
+  "IntelliJ", "VS Code", "NetBeans", "Git", "UML", "SQL", "PostgreSQL", "Linux", "AutoCAD"
+];
+
 
 const projects = [
   {
@@ -122,16 +119,23 @@ export default function Home() {
 
           <section id="skills" className="fade-in mb-20 md:mb-24" style={{ animationDelay: '0.2s' }}>
             <h2 className="text-3xl font-bold text-center mb-12 font-headline">Technical Proficiency</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl mx-auto">
-              {skills.map((skill) => (
-                <div key={skill.name}>
-                  <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-semibold">{skill.name}</h3>
-                    <span className="text-sm text-muted-foreground">{skill.proficiency}%</span>
-                  </div>
-                  <Progress value={skill.proficiency} aria-label={`${skill.name} proficiency`} />
+            <div className="max-w-4xl mx-auto space-y-8">
+              <div>
+                <h3 className="text-xl font-semibold text-center mb-6">Languages & Frameworks</h3>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {languagesAndFrameworks.map((skill) => (
+                    <Badge key={skill} variant="secondary" className="text-lg px-4 py-2">{skill}</Badge>
+                  ))}
                 </div>
-              ))}
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-center mb-6">Tools & Technologies</h3>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {toolsAndTechnologies.map((tool) => (
+                    <Badge key={tool} variant="secondary" className="text-lg px-4 py-2">{tool}</Badge>
+                  ))}
+                </div>
+              </div>
             </div>
           </section>
 
