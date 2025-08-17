@@ -81,7 +81,7 @@ export default function Home() {
             </p>
             <div className="flex justify-center items-center gap-4">
               <Button asChild variant="outline">
-                <a href="mailto:jane.doe@example.com"><Mail className="mr-2" /> Email</a>
+                <a href="mailto:marcogara24@gmail.com"><Mail className="mr-2" /> Email</a>
               </Button>
               <Button asChild variant="outline">
                 <a href="#" target="_blank" rel="noopener noreferrer"><Github className="mr-2" /> GitHub</a>
