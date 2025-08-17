@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'RetroFolio',
+  title: 'Portfolio',
   description: 'A retro-themed portfolio website.',
 };
 

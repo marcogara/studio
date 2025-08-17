@@ -80,7 +80,7 @@ export function GenerateDescriptionForm() {
               <FormItem>
                 <FormLabel>Project Title</FormLabel>
                 <FormControl>
-                  <Input placeholder="e.g., RetroFolio" {...field} />
+                  <Input placeholder="e.g., Portfolio" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

@@ -1,6 +1,7 @@
 import { Header } from "@/components/header";
 import { GenerateDescriptionForm } from "@/components/generate-description-form";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Quote } from "@/components/quote";
 
 export default function GenerateDescriptionPage() {
   return (
@@ -21,6 +22,10 @@ export default function GenerateDescriptionPage() {
               </CardContent>
             </Card>
           </div>
+          <Quote
+            text="Programming isn't about what you know; it's about what you can figure out."
+            author="Chris Pine"
+          />
         </div>
       </main>
     </div>

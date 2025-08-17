@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { ContactForm } from "@/components/contact-form";
 import { Separator } from "@/components/ui/separator";
+import { Quote } from "@/components/quote";
 import { useState, useEffect } from "react";
 
 const skills = [
@@ -94,6 +95,11 @@ export default function Home() {
               </Button>
             </div>
           </section>
+
+          <Quote
+            text="Programming isn't about what you know; it's about what you can figure out."
+            author="Chris Pine"
+          />
 
           <Separator className="my-16" />
 
