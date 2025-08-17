@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Self-driving car</title>
+    <title>Self-Driving Car</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section id="project_car" class="project_car">
-        <h2>Neural network Car Project</h2>
-        <p>Selfdriving car JavaScript project.</p>
+        <h1>Neural Network Car Project</h1>
+        <p>A self-driving car simulation powered by a neural network built from scratch in JavaScript.</p>
         <div class="car">
-            <canvas id="carCanvas"></canvas>
+            <canvas id="carCanvas" width="200" height="100"></canvas>
             <div id="verticalButtons" class="car-buttons">
                 <button onclick="save()">💾</button>
                 <button onclick="discard()">🗑️</button>
             </div>
-            <canvas id="networkCanvas"></canvas>
+            <canvas id="networkCanvas" width="450" height="100"></canvas>
         </div>
-        <script src="visualizer.js" defer></script>
-        <script src="network.js" defer></script>
-        <script src="sensor.js" defer></script>
-        <script src="utils.js" defer></script>
-        <script src="road.js" defer></script>
-        <script src="car.js" defer></script>
-        <script src="controls.js" defer></script>
-        <script src="main.js" defer></script>
     </section>
+
+    <script src="visualizer.js"></script>
+    <script src="network.js"></script>
+    <script src="sensor.js"></script>
+    <script src="utils.js"></script>
+    <script src="road.js"></script>
+    <script src="car.js"></script>
+    <script src="controls.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
