@@ -1,61 +1,64 @@
 body {
-    background-color: #36454F;
-    color: #E0E0E0;
+    background: hsl(204 23% 26%);
+    color: hsl(210 40% 98%);
     font-family: 'Roboto Mono', monospace;
     margin: 0;
-    padding: 1rem;
-    height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     text-align: center;
 }
 
 .project_car {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    margin-bottom: 20px;
 }
 
-h2 {
-    margin: 0;
-    padding: 0.5rem;
+.project_car h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
 }
 
-p {
-    margin: 0;
-    padding-bottom: 1rem;
+.project_car p {
+    font-size: 1.1em;
+    margin-bottom: 1.5em;
+    color: hsl(210 40% 80%);
 }
 
 .car {
-    flex: 1; /* Allow this to grow */
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 #carCanvas {
-    background: #a9a9a9;
+    background: #666;
+    border-radius: 0.5rem;
 }
 
 #networkCanvas {
     background: #333;
+    border-radius: 0.5rem;
 }
 
-#verticalButtons {
+.car-buttons {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 }
 
-button {
+.car-buttons button {
     border: none;
+    background: hsl(180 25% 30%);
+    color: hsl(210 40% 98%);
+    padding: 10px;
     border-radius: 5px;
-    padding: 5px 5px 2px 5px;
-    background-color: #a9a9a9;
-    color: #333;
     cursor: pointer;
+    font-size: 1.5em;
 }
 
-button:hover {
-    background-color: #008080;
+.car-buttons button:hover {
+    background: hsl(180 100% 25%);
 }
