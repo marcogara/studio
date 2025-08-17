@@ -37,7 +37,7 @@ const projects = [
     title: "Neural network Car Project",
     description: "Self-driving car JavaScript project. The car is driving autonomously, and it's driven by a neural network coded from scratch in JS.",
     technologies: ["JavaScript", "Neural Network"],
-    liveLink: "#",
+    liveLink: "/carProject/index.html",
     repoLink: "#",
     image: "/carAI.png",
     imageHint: "neural network car",
@@ -215,7 +215,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
