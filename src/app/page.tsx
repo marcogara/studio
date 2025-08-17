@@ -67,12 +67,11 @@ export default function Home() {
           <section id="hero" className="text-center fade-in mb-20 md:mb-24">
             <div className="flex justify-center mb-6">
                <Image
-                src="https://placehold.co/128x128.png"
+                src="/profile.png"
                 alt="Profile Picture"
                 width={128}
                 height={128}
                 className="rounded-full border-4 border-primary shadow-lg"
-                data-ai-hint="pixel art avatar"
               />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold font-headline mb-2">Marco</h1>
