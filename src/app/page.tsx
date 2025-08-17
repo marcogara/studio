@@ -11,7 +11,55 @@ import { ContactForm } from "@/components/contact-form";
 import { Separator } from "@/components/ui/separator";
 import { Quote } from "@/components/quote";
 import { useState, useEffect } from "react";
-import { projects, languagesAndFrameworks, toolsAndTechnologies } from "@/lib/data";
+
+// Project Data
+const projects = [
+  {
+    title: "Smart Interest App",
+    description: "A banking application for managing interest rates, built with a robust Java backend and a classic web frontend.",
+    technologies: ["Java", "PostgreSQL", "HTML", "CSS", "JavaScript"],
+    liveLink: "/smart-interest-app/index.html",
+    repoLink: "https://github.com/marcogara/interest-optimisation-account",
+    image: "/MVP_saving_app.png",
+    imageHint: "finance banking",
+  },
+  {
+    title: "Cyber-Store",
+    description: "An e-commerce platform for futuristic gadgets, built with a focus on performance and a seamless user experience.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Firebase"],
+    liveLink: "#",
+    repoLink: "#",
+    image: "https://placehold.co/600x400.png",
+    imageHint: "ecommerce tech",
+  },
+  {
+    title: "Code-Collab",
+    description: "A real-time collaborative code editor that allows developers to write, share, and debug code together from anywhere.",
+    technologies: ["React", "Node.js", "WebSockets", "Monaco Editor", "PostgreSQL"],
+    liveLink: "#",
+    repoLink: "#",
+    image: "https://placehold.co/600x400.png",
+    imageHint: "code editor",
+  },
+  {
+    title: "Data-Viz Dashboard",
+    description: "A dynamic dashboard for visualizing complex datasets, featuring interactive charts and data filtering capabilities.",
+    technologies: ["SvelteKit", "D3.js", "Python", "Flask", "Pandas"],
+    liveLink: "#",
+    repoLink: "#",
+    image: "https://placehold.co/600x400.png",
+    imageHint: "data dashboard",
+  },
+];
+
+// Skills Data
+const languagesAndFrameworks = [
+  "Java", "C/C++", "Python", "HTML/CSS/JS", "Spring", "AngularJS"
+];
+
+const toolsAndTechnologies = [
+  "IntelliJ", "VS Code", "NetBeans", "Git", "UML", "SQL", "PostgreSQL", "Linux", "AutoCAD"
+];
 
 export default function Home() {
   const [year, setYear] = useState<number | null>(null);
@@ -131,4 +179,29 @@ export default function Home() {
                       </Button>
                        <Button asChild size="sm">
                         <a href={project.liveLink} target="_blank" rel="noopener noreferrer">Live Demo <ExternalLink className="ml-2 h-4 w-4" /></a>
-                      </Now, all your project and skill data is in one place, `src/lib/data.ts`, making future updates much easier.
+                      </Button>
+                    </div>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          <Separator className="my-16" />
+
+          <section id="contact" className="fade-in" style={{ animationDelay: '0.6s' }}>
+            <h2 className="text-3xl font-bold text-center mb-12 font-headline">Get In Touch</h2>
+            <div className="max-w-2xl mx-auto">
+              <ContactForm />
+            </div>
+          </section>
+          
+        </div>
+      </main>
+
+      <footer className="bg-card text-center py-4 mt-auto">
+        <p className="text-muted-foreground">© {year ?? new Date().getFullYear()} Marco Gara. All Rights Reserved.</p>
+      </footer>
+    </div>
+  );
+}
