@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neural Network Car Project</title>
     <link rel="stylesheet" href="style.css">
+    <script src="visualizer.js" defer></script>
+    <script src="network.js" defer></script>
+    <script src="sensor.js" defer></script>
+    <script src="utils.js" defer></script>
+    <script src="road.js" defer></script>
+    <script src="controls.js" defer></script>
+    <script src="car.js" defer></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
     <section id="project_car" class="project_car">
-        <h2>Neural network Car Project</h2>
-        <p>Self-driving car JavaScript project. the car is driving autonomsly and its driven by a neural network coded from schratch in JS.</p>
-        <div class="car">
+        <h1>Neural Network Car Project</h1>
+        <p>A self-driving car JavaScript project. The car is driving autonomously, driven by a neural network coded from scratch in JS.</p>
+        <div class="car-container">
             <canvas id="carCanvas"></canvas>
-            <div id="verticalButtons" class="car-buttons">
+            <div id="verticalButtons">
                 <button onclick="save()">💾</button>
                 <button onclick="discard()">🗑️</button>
             </div>
             <canvas id="networkCanvas"></canvas>
         </div>
-        <script src="road.js"></script>
-        <script src="controls.js"></script>
-        <script src="utils.js"></script>
-        <script src="sensor.js"></script>
-        <script src="network.js"></script>
-        <script src="visualizer.js"></script>
-        <script src="car.js"></script>
-        <script src="main.js"></script>
     </section>
 </body>
 </html>
