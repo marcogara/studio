@@ -27,7 +27,8 @@ const projects = [
     title: "Java Adventures for Kids",
     description: "A fun, interactive book designed to teach children the fundamentals of Java programming with easy-to-understand examples and copy-paste code snippets.",
     technologies: ["Java", "Education"],
-    liveLink: "#",
+    liveLink: "https://www.amazon.com/CODE-KIDS-JAVA-Learn-doing-ebook/dp/B0F4MK7YKF/ref=tmm_kin_swatch_0",
+    liveLinkText: "Buy on Amazon",
     repoLink: "#",
     image: "/codeForKidsJAVA.png",
     imageHint: "book code kids",
@@ -162,7 +163,7 @@ export default function Home() {
           <section id="projects" className="fade-in" style={{ animationDelay: '0.4s' }}>
             <h2 className="text-3xl font-bold text-center mb-12 font-headline">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project, index) => (
+              {projects.map((project: any, index) => (
                 <Card key={index} className="flex flex-col overflow-hidden hover:border-primary/50 transition-colors duration-300">
                   <CardHeader className="p-0">
                      <Image
@@ -177,7 +178,7 @@ export default function Home() {
                   <CardContent className="flex-1 flex flex-col p-6">
                     <CardTitle className="text-xl font-bold mb-2 font-headline">{project.title}</CardTitle>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.map(tech => <Badge key={tech} variant="secondary">{tech}</Badge>)}
+                      {project.technologies.map((tech: string) => <Badge key={tech} variant="secondary">{tech}</Badge>)}
                     </div>
                     <CardDescription className="flex-1 text-foreground/80">{project.description}</CardDescription>
                   </CardContent>
@@ -187,7 +188,7 @@ export default function Home() {
                         <a href={project.repoLink} target="_blank" rel="noopener noreferrer"><Github className="mr-2 h-4 w-4" /> Repo</a>
                       </Button>
                        <Button asChild size="sm">
-                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer">Live Demo <ExternalLink className="ml-2 h-4 w-4" /></a>
+                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer">{project.liveLinkText || 'Live Demo'} <ExternalLink className="ml-2 h-4 w-4" /></a>
                       </Button>
                     </div>
                   </CardFooter>
@@ -214,3 +215,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
