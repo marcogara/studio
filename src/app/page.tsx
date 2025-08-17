@@ -34,13 +34,22 @@ const projects = [
     imageHint: "book code kids",
   },
   {
-    title: "IHK Project",
+    title: "Self-driving car JavaScript project",
     description: "Self-driving car JavaScript project. The car is driving autonomously, and it's driven by a neural network coded from scratch in JS.",
     technologies: ["JavaScript", "Neural Network"],
     liveLink: "/carProject/index.html",
     repoLink: "#",
     image: "/carAI.png",
     imageHint: "neural network car",
+  },
+  {
+    title: "IHK Project",
+    description: "Description for the IHK Project.",
+    technologies: ["Tech 1", "Tech 2"],
+    liveLink: "#",
+    repoLink: "#",
+    image: "https://placehold.co/600x400.png",
+    imageHint: "project placeholder",
   },
   {
     title: "Code-Collab",
