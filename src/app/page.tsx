@@ -48,8 +48,8 @@ const projects = [
     technologies: ["Tech 1", "Tech 2"],
     liveLink: "#",
     repoLink: "#",
-    image: "https://placehold.co/600x400.png",
-    imageHint: "project placeholder",
+    image: "/IHK/320px-IHK_Berlin_Logo.svg.png",
+    imageHint: "education certificate",
   },
   {
     title: "Code-Collab",
