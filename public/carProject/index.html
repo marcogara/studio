@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neural Network Car Project</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
+    <title>Self-Driving Car</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section id="project_car" class="project_car">
         <h2>Neural network Car Project</h2>
-        <p>Selfdriving car JavaScript project.</p>
+        <p>Self-driving car JavaScript project.</p>
+
         <div class="car">
-            <canvas id="carCanvas"></canvas>
+            <canvas id="carCanvas" width="200" height="600"></canvas>
             <div id="verticalButtons" class="car-buttons">
                 <button onclick="save()">💾</button>
                 <button onclick="discard()">🗑️</button>
             </div>
-            <canvas id="networkCanvas"></canvas>
+            <canvas id="networkCanvas" width="500" height="600"></canvas>
         </div>
-        <script src="js/visualizer.js" defer></script>
-        <script src="js/sensor.js" defer></script>
-        <script src="js/utils.js" defer></script>
-        <script src="js/network.js" defer></script>
-        <script src="js/road.js" defer></script>
-        <script src="js/car.js" defer></script>
-        <script src="js/controls.js" defer></script>
-        <script src="js/main.js" defer></script>
     </section>
+
+    <script src="controls.js" defer></script>
+    <script src="utils.js" defer></script>
+    <script src="road.js" defer></script>
+    <script src="sensor.js" defer></script>
+    <script src="car.js" defer></script>
+    <script src="network.js" defer></script>
+    <script src="visualizer.js" defer></script>
+    <script src="main.js" defer></script>
 </body>
 </html>
