@@ -1,3 +1,6 @@
+
+"use client";
+
 import Image from "next/image";
 import { Github, Linkedin, Mail, ArrowRight, Code, ExternalLink } from 'lucide-react';
 import { Header } from "@/components/header";
@@ -7,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { ContactForm } from "@/components/contact-form";
 import { Separator } from "@/components/ui/separator";
+import { useState, useEffect } from "react";
 
 const skills = [
   { name: "JavaScript (ES6+)", proficiency: 95 },
@@ -50,6 +54,12 @@ const projects = [
 ];
 
 export default function Home() {
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -176,7 +186,7 @@ export default function Home() {
       </main>
       <footer className="py-6 border-t border-border/40 bg-background/95">
         <div className="container text-center text-muted-foreground text-sm">
-          © {new Date().getFullYear()} Marco. All Rights Reserved.
+          {year ? `© ${year} Marco. All Rights Reserved.` : "© Marco. All Rights Reserved."}
         </div>
       </footer>
     </div>
