@@ -74,7 +74,7 @@ export default function Home() {
                 className="rounded-full border-4 border-primary shadow-lg"
               />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold font-headline mb-2">Marco</h1>
+            <h1 className="text-4xl md:text-5xl font-bold font-headline mb-2">It's me, Marco!</h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-6">Full-Stack Developer & Tech Enthusiast</p>
             <p className="max-w-3xl mx-auto text-foreground/80 mb-8">
               Crafting elegant and efficient solutions for the web. I thrive on turning complex problems into beautiful, intuitive digital experiences.
