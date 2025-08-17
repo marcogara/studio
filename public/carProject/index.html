@@ -3,30 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Self-Driving Car</title>
+    <title>Neural Network Car Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section id="project_car" class="project_car">
-        <h2>Neural network Car Project</h2>
-        <p>Self-driving car JavaScript project.</p>
-
-        <div class="car">
-            <canvas id="carCanvas" width="200" height="600"></canvas>
+        <div class="canvases">
+            <canvas id="carCanvas" width="200" height="500"></canvas>
             <div id="verticalButtons" class="car-buttons">
                 <button onclick="save()">💾</button>
                 <button onclick="discard()">🗑️</button>
             </div>
-            <canvas id="networkCanvas" width="500" height="600"></canvas>
+            <canvas id="networkCanvas" width="500" height="500"></canvas>
         </div>
     </section>
-
-    <script src="controls.js" defer></script>
+    
     <script src="utils.js" defer></script>
     <script src="road.js" defer></script>
+    <script src="controls.js" defer></script>
     <script src="sensor.js" defer></script>
-    <script src="car.js" defer></script>
     <script src="network.js" defer></script>
+    <script src="car.js" defer></script>
     <script src="visualizer.js" defer></script>
     <script src="main.js" defer></script>
 </body>
