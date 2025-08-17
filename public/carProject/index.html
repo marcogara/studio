@@ -10,38 +10,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <a href="/" class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-terminal-square"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m8 9-2 2 2 2"/><path d="M13 15h3"/></svg>
-                <span>Portfolio</span>
-            </a>
-            <a href="/" class="back-link">Back to Portfolio</a>
-        </div>
+    <header>
+        <a href="/" class="back-link">&larr; Back to Portfolio</a>
+        <h1>Neural network Car Project</h1>
     </header>
-
-    <main class="container">
-        <section id="project_car" class="project_car">
-            <h1>Neural network Car Project</h1>
-            <p>Self-driving car JavaScript project. The car is driving autonomously, and it's driven by a neural network coded from scratch in JS.</p>
-            <div class="car">
-                <canvas id="carCanvas"></canvas>
-                <div id="verticalButtons" class="car-buttons">
-                    <button onclick="save()">💾</button>
-                    <button onclick="discard()">🗑️</button>
-                </div>
-                <canvas id="networkCanvas"></canvas>
+    <main>
+        <p class="description">Self-driving car JavaScript project. The car is driving autonomously, and it's driven by a neural network coded from scratch in JS.</p>
+        <div class="car-container">
+            <canvas id="carCanvas"></canvas>
+            <div id="verticalButtons">
+                <button onclick="save()">💾</button>
+                <button onclick="discard()">🗑️</button>
             </div>
-        </section>
+            <canvas id="networkCanvas"></canvas>
+        </div>
     </main>
+    <footer>
+        <p>Built by Marco Gara</p>
+    </footer>
 
-    <script src="visualizer.js"></script>
-    <script src="network.js"></script>
-    <script src="sensor.js"></script>
-    <script src="utils.js"></script>
     <script src="road.js"></script>
     <script src="controls.js"></script>
+    <script src="sensor.js"></script>
+    <script src="utils.js"></script>
     <script src="car.js"></script>
+    <script src="network.js"></script>
+    <script src="visualizer.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
