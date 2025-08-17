@@ -5,37 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neural Network Car Project</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="/" class="back-link">&larr; Back to Portfolio</a>
-        <h1>Neural network Car Project</h1>
-    </header>
-    <main>
-        <p class="description">Self-driving car JavaScript project. The car is driving autonomously, and it's driven by a neural network coded from scratch in JS.</p>
-        <div class="car-container">
+    <section id="project_car" class="project_car">
+        <h2>Neural network Car Project</h2>
+        <p>Self-driving car JavaScript project. the car is driving autonomsly and its driven by a neural network coded from schratch in JS.</p>
+        <div class="car">
             <canvas id="carCanvas"></canvas>
-            <div id="verticalButtons">
+            <div id="verticalButtons" class="car-buttons">
                 <button onclick="save()">💾</button>
                 <button onclick="discard()">🗑️</button>
             </div>
             <canvas id="networkCanvas"></canvas>
         </div>
-    </main>
-    <footer>
-        <p>Built by Marco Gara</p>
-    </footer>
-
-    <script src="road.js"></script>
-    <script src="controls.js"></script>
-    <script src="sensor.js"></script>
-    <script src="utils.js"></script>
-    <script src="car.js"></script>
-    <script src="network.js"></script>
-    <script src="visualizer.js"></script>
-    <script src="main.js"></script>
+        <script src="road.js"></script>
+        <script src="controls.js"></script>
+        <script src="utils.js"></script>
+        <script src="sensor.js"></script>
+        <script src="network.js"></script>
+        <script src="visualizer.js"></script>
+        <script src="car.js"></script>
+        <script src="main.js"></script>
+    </section>
 </body>
 </html>
