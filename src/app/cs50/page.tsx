@@ -39,14 +39,16 @@ export default function CS50Page() {
 
                 <div>
                    <h3 className="text-2xl font-semibold mb-4 text-center font-headline">Certificate</h3>
-                  <div className="w-full relative bg-white p-4 rounded-lg">
-                      <Image
-                        src="/cs50/CS50P.png"
-                        alt="CS50 Python Certificate"
-                        width={1275}
-                        height={1650}
-                        className="w-full h-auto"
-                      />
+                  <div className="w-full relative bg-white p-4 rounded-lg flex justify-center">
+                      <div className="w-full md:w-3/5">
+                        <Image
+                            src="/cs50/CS50P.png"
+                            alt="CS50 Python Certificate"
+                            width={1275}
+                            height={1650}
+                            className="w-full h-auto"
+                        />
+                      </div>
                   </div>
                    <div className="text-center mt-4">
                      <Button asChild>
