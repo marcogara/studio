@@ -56,10 +56,10 @@ const projects = [
   },
   {
     title: "CS50's Introduction to Programming with Python",
-    description: "Completed Harvard's renowned introductory course on Python, covering core concepts from functions and data structures to object-oriented programming.",
+    description: "Completed Harvard's renowned introductory course on Python, covering core concepts from functions and data structures to object-oriented programming. This project showcases the final project and certificate.",
     technologies: ["Python", "Education"],
-    liveLink: "https://certificates.cs50.io/16149a88-261c-46a4-954a-a0353108c9c0.pdf?size=letter",
-    liveLinkText: "View Certificate",
+    liveLink: "/cs50",
+    liveLinkText: "View Project",
     repoLink: "https://github.com/marcogara/CS50-s-Introduction-to-Programming-with-Python",
     image: "/cs50/CS50P.png",
     imageHint: "python code certificate",
@@ -132,7 +132,7 @@ export default function Home() {
 
           <Separator className="my-16" />
 
-          <section id="about" className="fade-in text-center" style={{ animationDelay: '0.1s' }}>
+          <section id="about" className="text-center fade-in" style={{ animationDelay: '0.1s' }}>
             <h2 className="text-3xl font-bold mb-8 font-headline">About Me</h2>
             <div className="max-w-3xl mx-auto text-foreground/80 space-y-4 text-left">
               <p>
@@ -229,9 +229,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
-
-
