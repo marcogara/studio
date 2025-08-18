@@ -55,13 +55,14 @@ const projects = [
     isLogo: true,
   },
   {
-    title: "Code-Collab",
-    description: "A real-time collaborative code editor that allows developers to write, share, and debug code together from anywhere.",
-    technologies: ["React", "Node.js", "WebSockets", "Monaco Editor", "PostgreSQL"],
-    liveLink: "#",
-    repoLink: "#",
-    image: "https://placehold.co/600x400.png",
-    imageHint: "code editor",
+    title: "CS50's Introduction to Programming with Python",
+    description: "Completed Harvard's renowned introductory course on Python, covering core concepts from functions and data structures to object-oriented programming.",
+    technologies: ["Python", "Education"],
+    liveLink: "https://certificates.cs50.io/16149a88-261c-46a4-954a-a0353108c9c0.pdf?size=letter",
+    liveLinkText: "View Certificate",
+    repoLink: "https://github.com/marcogara/CS50-s-Introduction-to-Programming-with-Python",
+    image: "/cs50/CS50P.png",
+    imageHint: "python code certificate",
   },
   {
     title: "Data-Viz Dashboard",
@@ -232,4 +233,5 @@ export default function Home() {
     
 
     
+
 
