@@ -77,7 +77,7 @@ const projects = [
 
 // Skills Data
 const languagesAndFrameworks = [
-  "Java", "C/C++", "Python", "HTML/CSS/JS", "Spring", "AngularJS"
+  "Java", "C/C++", "Python", "HTML/CSS/JS", "Spring", "Spring Boot", "AngularJS"
 ];
 
 const toolsAndTechnologies = [
