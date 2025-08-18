@@ -60,7 +60,7 @@ const projects = [
     technologies: ["Python", "Education"],
     liveLink: "/cs50",
     liveLinkText: "View Project",
-    repoLink: "https://github.com/marcogara/CS50-s-Introduction-to-Programming-with-Python",
+    repoLink: "https://github.com/marcogara/Phyton",
     image: "/cs50/CS50P.png",
     imageHint: "python code certificate",
   },
