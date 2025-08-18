@@ -67,7 +67,7 @@ const projects = [
   {
     title: "AuthCore",
     description: "A reusable authorization module built with Spring Boot and Java, designed to be integrated into other projects for robust security.",
-    technologies: ["Java", "Spring Boot", "Security"],
+    technologies: ["Java", "Spring Boot", "Security", "JPA"],
     liveLink: "/authcore",
     repoLink: "https://github.com/marcogara/authcore",
     video: "/authcore/Anmeldung.mp4",
