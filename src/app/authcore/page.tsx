@@ -1,7 +1,9 @@
 
 import { Header } from "@/components/header";
 import { AuthCoreLoginForm } from "@/components/authcore-login-form";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github, Info } from "lucide-react";
 
 export default function AuthCorePage() {
   return (
@@ -20,6 +22,17 @@ export default function AuthCorePage() {
               <CardContent>
                 <AuthCoreLoginForm />
               </CardContent>
+              <CardFooter className="flex flex-col items-center text-center gap-4">
+                 <div className="text-xs text-muted-foreground flex items-center gap-2">
+                    <Info className="h-4 w-4" />
+                    <span>This UI is for demonstration only. The Spring Boot backend is not live.</span>
+                </div>
+                <Button asChild>
+                  <a href="https://github.com/marcogara/authcore" target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" /> View Code on GitHub
+                  </a>
+                </Button>
+              </CardFooter>
             </Card>
           </div>
         </div>
