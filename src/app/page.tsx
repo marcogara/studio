@@ -112,7 +112,7 @@ export default function Home() {
             <p className="max-w-3xl mx-auto text-foreground/80 mb-8">
               From crafting secure Java backends and exploring AI with JavaScript to developing educational content, I thrive on turning diverse and complex challenges into practical, user-focused applications.
             </p>
-            <div className="flex justify-center items-center gap-4">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-4">
               <Button asChild variant="outline">
                 <a href="mailto:marcogara24@gmail.com"><Mail className="mr-2" /> Email</a>
               </Button>
