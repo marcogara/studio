@@ -70,8 +70,8 @@ const projects = [
     technologies: ["Java", "Spring Boot", "Security"],
     liveLink: "#",
     repoLink: "#",
-    image: "https://placehold.co/600x400.png",
-    imageHint: "security lock",
+    video: "/authcore/Anmeldung.mp4",
+    imageHint: "security lock animation",
   },
 ];
 
@@ -179,14 +179,28 @@ export default function Home() {
               {projects.map((project: any, index) => (
                 <Card key={index} className="flex flex-col overflow-hidden hover:border-primary/50 transition-colors duration-300">
                   <CardHeader className="p-0">
-                    <div className="w-full h-48 relative bg-white">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className={project.isLogo ? "object-contain p-8" : "object-cover"}
-                        data-ai-hint={project.imageHint}
-                      />
+                    <div className="w-full h-48 relative bg-card">
+                      {project.video ? (
+                        <video
+                          src={project.video}
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="w-full h-full object-cover"
+                          data-ai-hint={project.imageHint}
+                        />
+                      ) : (
+                        <div className="bg-white w-full h-full">
+                          <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            className={project.isLogo ? "object-contain p-8" : "object-cover"}
+                            data-ai-hint={project.imageHint}
+                          />
+                        </div>
+                      )}
                     </div>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col p-6">
