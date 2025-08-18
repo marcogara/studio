@@ -70,7 +70,7 @@ const projects = [
     technologies: ["Java", "Spring Boot", "Security", "JPA"],
     liveLink: "/authcore",
     repoLink: "https://github.com/marcogara/authcore",
-    video: "/authcore/Anmeldung.mp4",
+    video: "/authcore/login1.mp4",
     imageHint: "security lock animation",
   },
 ];
