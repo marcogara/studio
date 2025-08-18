@@ -52,7 +52,7 @@ export default function CS50Page() {
                   </div>
                    <div className="text-center mt-4">
                      <Button asChild>
-                        <a href="https://certificates.cs50.io/16149a88-261c-46a4-954a-a0353108c9c0.pdf?size=letter" target="_blank" rel="noopener noreferrer">
+                        <a href="/cs50/CS50P.pdf" target="_blank" rel="noopener noreferrer">
                           View Official Certificate PDF <ExternalLink className="ml-2 h-4 w-4" />
                         </a>
                       </Button>
