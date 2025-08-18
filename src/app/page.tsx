@@ -65,13 +65,13 @@ const projects = [
     imageHint: "python code certificate",
   },
   {
-    title: "Data-Viz Dashboard",
-    description: "A dynamic dashboard for visualizing complex datasets, featuring interactive charts and data filtering capabilities.",
-    technologies: ["SvelteKit", "D3.js", "Python", "Flask", "Pandas"],
+    title: "AuthCore",
+    description: "A reusable authorization module built with Spring Boot and Java, designed to be integrated into other projects for robust security.",
+    technologies: ["Java", "Spring Boot", "Security"],
     liveLink: "#",
     repoLink: "#",
     image: "https://placehold.co/600x400.png",
-    imageHint: "data dashboard",
+    imageHint: "security lock",
   },
 ];
 
