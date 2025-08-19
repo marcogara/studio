@@ -5,3 +5,9 @@ runConfig:
   # Increase this value if you'd like to automatically spin up
   # more instances in response to increased traffic.
   maxInstances: 1
+  # The GMAIL_EMAIL and GMAIL_APP_PASSWORD secrets are securely stored in
+  # Secret Manager. This configuration grants the App Hosting backend
+  # permission to access them at runtime.
+  secrets:
+    - secret: GMAIL_EMAIL
+    - secret: GMAIL_APP_PASSWORD
