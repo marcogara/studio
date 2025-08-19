@@ -8,6 +8,5 @@ runConfig:
 env:
   - variable: GMAIL_EMAIL
     secret: GMAIL_EMAIL
-env:    
     - variable: GMAIL_APP_PASSWORD
     secret: GMAIL_APP_PASSWORD
