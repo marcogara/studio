@@ -20,7 +20,9 @@ export async function sendContactMessage(values: z.infer<typeof contactSchema>) 
 
   // Create a transporter object using the Gmail SMTP server
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true, // use SSL
     auth: {
       user: process.env.GMAIL_EMAIL,
       pass: process.env.GMAIL_APP_PASSWORD,
