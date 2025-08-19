@@ -51,6 +51,7 @@ export async function sendContactMessage(values: z.infer<typeof contactSchema>) 
     await transporter.sendMail(mailOptions);
     return { success: true };
   } catch (error) {
+    // Log the detailed error to the server console for debugging
     console.error("Failed to send email:", JSON.stringify(error, null, 2));
     return { success: false, error: "Failed to send message. Please try again later." };
   }
