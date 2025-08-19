@@ -1,3 +1,4 @@
+
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -35,19 +36,23 @@ const formSchema = z.object({
   }),
 });
 
+const MAX_MESSAGE_LENGTH = 500;
+
 export function ContactForm() {
   const [isPending, startTransition] = useTransition();
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    mode: "onChange", // Validate fields as they are changed
+    mode: "onChange",
     defaultValues: {
       name: "",
       email: "",
       message: "",
     },
   });
+
+  const messageValue = form.watch("message");
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     startTransition(async () => {
@@ -112,7 +117,12 @@ export function ContactForm() {
                   {...field}
                 />
               </FormControl>
-              <FormMessage />
+              <div className="flex justify-between items-center">
+                <FormMessage />
+                <div className="text-xs text-muted-foreground ml-auto">
+                  {messageValue.length} / {MAX_MESSAGE_LENGTH}
+                </div>
+              </div>
             </FormItem>
           )}
         />
