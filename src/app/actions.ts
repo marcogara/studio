@@ -23,6 +23,7 @@ export async function sendContactMessage(values: z.infer<typeof contactSchema>) 
     host: "smtp.gmail.com",
     port: 465,
     secure: true, // use SSL
+    requireTLS: true,
     auth: {
       user: process.env.GMAIL_EMAIL,
       pass: process.env.GMAIL_APP_PASSWORD,
@@ -49,7 +50,7 @@ export async function sendContactMessage(values: z.infer<typeof contactSchema>) 
     await transporter.sendMail(mailOptions);
     return { success: true };
   } catch (error) {
-    console.error("Failed to send email:", error);
+    console.error("Failed to send email:", JSON.stringify(error, null, 2));
     return { success: false, error: "Failed to send message. Please try again later." };
   }
 }
