@@ -24,9 +24,10 @@ const formSchema = z.object({
   name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
   }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
+  email: z.string()
+    .email({ message: "Please enter a valid email address." })
+    .regex(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/, { message: "Email must be in lowercase and contain only valid characters."})
+    .transform(value => value.toLowerCase()),
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
   }).max(500, {
@@ -40,6 +41,7 @@ export function ContactForm() {
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+    mode: "onChange", // Validate fields as they are changed
     defaultValues: {
       name: "",
       email: "",
