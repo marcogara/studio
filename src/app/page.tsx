@@ -16,7 +16,7 @@ import { useState, useEffect } from "react";
 const projects = [
   {
     title: "Smart Interest App",
-    description: "A banking application for managing interest rates, built with a robust Java backend and a classic web frontend. This UI is for demonstration only. The Spring Boot backend is not live.",
+    description: "A banking application for managing interest rates, built with a robust Java backend and a classic web frontend. Check out the repo for the backend.\n\nThis UI is for demonstration only. The Spring Boot backend is not live.",
     technologies: ["Java", "PostgreSQL", "HTML", "CSS", "JavaScript"],
     liveLink: "/smart-interest-app/index.html",
     repoLink: "https://github.com/marcogara/interest-optimisation-account",
@@ -208,7 +208,7 @@ export default function Home() {
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech: string) => <Badge key={tech} variant="secondary">{tech}</Badge>)}
                     </div>
-                    <CardDescription className="flex-1 text-foreground/80">{project.description}</CardDescription>
+                    <CardDescription className="flex-1 text-foreground/80 whitespace-pre-wrap">{project.description}</CardDescription>
                   </CardContent>
                   <CardFooter className="p-6 bg-card-foreground/5">
                     <div className="w-full flex justify-between items-center gap-4">
@@ -243,3 +243,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
