@@ -13,9 +13,8 @@
       <div id="login-page" class="login-container">
         <div class="login-card">
           <div class="login-logo">💰</div>
-          <h1 class="login-title">Smart Interest</h1>
-          <p class="login-subtitle">Your Supersaving Dashboard</p>
-          
+          <h1 class="login-title" id="login-title">Smart Interest</h1>
+          <p class="login-subtitle" id="login-subtitle">Your Supersaving Dashboard</p>
           <form class="login-form" id="login-form">
             <div class="form-group">
               <label for="name-input" class="form-label">What's your name?</label>
@@ -28,7 +27,7 @@
                 autocomplete="given-name"
               />
             </div>
-            <button type="submit" class="login-btn">
+            <button type="submit" class="login-btn" id="login-btn">
               Continue to Dashboard
             </button>
           </form>
@@ -53,11 +52,11 @@
             <div class="balance-section">
               <div class="card primary-card">
                 <div class="card-header">
-                  <h3 class="card-title">Account Total</h3>
+                  <h3 class="card-title" id="account-total-title">Account Total</h3>
                   <span class="card-subtitle">Your current balance</span>
                 </div>
                 <div class="card-content">
-                  <div class="balance-amount" id="balance-amount">$25,847.32</div>
+                  <div class="balance-amount" id="balance-amount"></div>
                 </div>
               </div>
             </div>
@@ -69,7 +68,7 @@
                   <span class="card-subtitle">Projected returns</span>
                 </div>
                 <div class="card-content">
-                  <div class="rate-display">estimates 2% - 4%</div>
+                  <div class="rate-display" id="annual-rate"></div>
                 </div>
               </div>
               
@@ -79,7 +78,7 @@
                   <span class="card-subtitle">This month</span>
                 </div>
                 <div class="card-content">
-                  <div class="earned-amount" id="earned-amount">$298.67</div>
+                  <div class="earned-amount" id="earned-amount"></div>
                 </div>
               </div>
             </div>
@@ -94,8 +93,8 @@
                     <span class="card-subtitle">Total earned to date</span>
                   </div>
                   <div class="card-content">
-                    <div class="interest-amount accumulated" id="accumulated-amount">$1,247.85</div>
-                    <div class="interest-growth" id="yearly-growth">+$1,247.85 this year</div>
+                    <div class="interest-amount accumulated" id="accumulated-amount"></div>
+                    <div class="interest-growth" id="yearly-growth"></div>
                   </div>
                 </div>
                 
@@ -105,7 +104,7 @@
                     <span class="card-subtitle">Weekly accrual</span>
                   </div>
                   <div class="card-content">
-                    <div class="interest-amount pending" id="pending-amount">$87.43</div>
+                    <div class="interest-amount pending" id="pending-amount"></div>
                     <div class="interest-note">Next payout in 3 days</div>
                   </div>
                 </div>
@@ -138,148 +137,261 @@
     </div>
     
     <script>
-      // Mock data for the interest app
-      const userData = {
-        accountTotal: 25847.32,
-        interestAccumulated: 1247.85,
-        interestPending: 87.43,
-        annualRate: 4.2,
-        earnedThisMonth: 298.67,
-        earnedThisYear: 1247.85,
-        lastUpdated: new Date().toLocaleString()
+  // Mock data for the interest app
+  const userData = {
+    accountTotal: 25847.32,
+    interestAccumulated: 1247.85,
+    interestPending: 87.43,
+    annualRate: 4.2,
+    earnedThisMonth: 298.67,
+    earnedThisYear: 1247.85,
+    lastUpdated: new Date().toLocaleString()
+  }
+
+  let userName = '';
+
+  // Detect user's language and country for currency
+  const userLocale = navigator.language || 'en-US';
+  const shortLocale = userLocale.split('-')[0];
+
+  const localeCurrencyMap = {
+    'en': 'USD',
+    'en-US': 'USD',
+    'en-GB': 'GBP',
+    'fr': 'EUR',
+    'fr-FR': 'EUR',
+    'de': 'EUR',
+    'de-DE': 'EUR',
+    'ja': 'JPY',
+    'ja-JP': 'JPY',
+    // ...add more as needed
+  };
+
+  const userCurrency =
+    localeCurrencyMap[userLocale] ||
+    localeCurrencyMap[shortLocale] ||
+    'USD'; // Default to USD if not found
+
+  function formatCurrency(amount) {
+    return new Intl.NumberFormat(userLocale, {
+      style: 'currency',
+      currency: userCurrency,
+      minimumFractionDigits: 2
+    }).format(amount)
+  }
+
+  function formatPercentage(rate) {
+    return `${rate.toFixed(2)}%`
+  }
+
+  function showDashboard(name) {
+    userName = name;
+    document.getElementById('login-page').style.display = 'none';
+    document.getElementById('dashboard').classList.add('active');
+    setUIText();
+    updateDashboardData();
+    startRealTimeUpdates();
+  }
+
+  function updateDashboardData() {
+    document.getElementById('balance-amount').textContent = formatCurrency(userData.accountTotal);
+    document.getElementById('earned-amount').textContent = formatCurrency(userData.earnedThisMonth);
+    document.getElementById('accumulated-amount').textContent = formatCurrency(userData.interestAccumulated);
+    document.getElementById('pending-amount').textContent = formatCurrency(userData.interestPending);
+    document.getElementById('yearly-growth').textContent = `+${formatCurrency(userData.earnedThisYear)} ${new Date().getFullYear()}`;
+    document.getElementById('annual-rate').textContent = formatPercentage(userData.annualRate);
+    document.getElementById('last-updated').textContent = `${t.lastUpdated}: ${userData.lastUpdated}`;
+  }
+
+  function startRealTimeUpdates() {
+    // Add click handlers for interactive elements
+    document.querySelectorAll('.action-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.target.style.transform = 'scale(0.95)'
+        setTimeout(() => {
+          e.target.style.transform = 'scale(1)'
+        }, 150)
+      })
+    })
+
+    // Add pulse animation to notification dot
+    const notificationDot = document.querySelector('.notification-dot')
+    if (notificationDot) {
+      setInterval(() => {
+        notificationDot.style.animation = 'none'
+        setTimeout(() => {
+          notificationDot.style.animation = 'pulse 2s infinite'
+        }, 10)
+      }, 5000)
+    }
+
+    // Simulate real-time updates
+    setInterval(() => {
+      userData.interestPending += 0.01
+      userData.lastUpdated = new Date().toLocaleString()
+      
+      const pendingElement = document.getElementById('pending-amount')
+      const lastUpdatedElement = document.getElementById('last-updated')
+      
+      if (pendingElement) {
+        pendingElement.textContent = formatCurrency(userData.interestPending)
       }
-
-      let userName = '';
-
-      function formatCurrency(amount) {
-        return new Intl.NumberFormat('en-US', {
-          style: 'currency',
-          currency: 'USD',
-          minimumFractionDigits: 2
-        }).format(amount)
+      if (lastUpdatedElement) {
+        lastUpdatedElement.textContent = `Last updated: ${userData.lastUpdated}`
       }
+    }, 30000) // Update every 30 seconds
+  }
 
-      function formatPercentage(rate) {
-        return `${rate.toFixed(2)}%`
-      }
+  // Modal logic
+  function showModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+  }
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+  }
 
-      function showDashboard(name) {
-        userName = name;
-        
-        // Hide login page and show dashboard
-        document.getElementById('login-page').style.display = 'none';
-        document.getElementById('dashboard').classList.add('active');
-        
-        // Update welcome message
-        document.getElementById('welcome-message').textContent = `Welcome back, ${name}`;
-        
-        // Update all the financial data
-        updateDashboardData();
-        
-        // Start real-time updates
-        startRealTimeUpdates();
-      }
+  document.querySelector('.action-btn.primary').addEventListener('click', function() {
+    showModal('details-modal');
+  });
+  document.querySelector('.action-btn.secondary').addEventListener('click', function() {
+    showModal('funds-modal');
+  });
 
-      function updateDashboardData() {
-        document.getElementById('balance-amount').textContent = formatCurrency(userData.accountTotal);
-        document.getElementById('earned-amount').textContent = formatCurrency(userData.earnedThisMonth);
-        document.getElementById('accumulated-amount').textContent = formatCurrency(userData.interestAccumulated);
-        document.getElementById('pending-amount').textContent = formatCurrency(userData.interestPending);
-        document.getElementById('yearly-growth').textContent = `+${formatCurrency(userData.earnedThisYear)} this year`;
-        document.getElementById('last-updated').textContent = `Last updated: ${userData.lastUpdated}`;
-      }
+  document.querySelectorAll('.modal-close-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      closeModal(e.target.closest('.modal-overlay').id);
+    });
+  });
 
-      function startRealTimeUpdates() {
-        // Add click handlers for interactive elements
-        document.querySelectorAll('.action-btn').forEach(btn => {
-          btn.addEventListener('click', (e) => {
-            e.target.style.transform = 'scale(0.95)'
-            setTimeout(() => {
-              e.target.style.transform = 'scale(1)'
-            }, 150)
-          })
-        })
+  // Optional: close modal when clicking outside modal box
+  document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal(overlay.id);
+    });
+  });
 
-        // Add pulse animation to notification dot
-        const notificationDot = document.querySelector('.notification-dot')
-        if (notificationDot) {
-          setInterval(() => {
-            notificationDot.style.animation = 'none'
-            setTimeout(() => {
-              notificationDot.style.animation = 'pulse 2s infinite'
-            }, 10)
-          }, 5000)
-        }
+  // Handle login form submission
+  document.getElementById('login-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const nameInput = document.getElementById('name-input');
+    const name = nameInput.value.trim();
+    
+    if (name) {
+      showDashboard(name);
+    }
+  });
 
-        // Simulate real-time updates
-        setInterval(() => {
-          userData.interestPending += 0.01
-          userData.lastUpdated = new Date().toLocaleString()
-          
-          const pendingElement = document.getElementById('pending-amount')
-          const lastUpdatedElement = document.getElementById('last-updated')
-          
-          if (pendingElement) {
-            pendingElement.textContent = formatCurrency(userData.interestPending)
-          }
-          if (lastUpdatedElement) {
-            lastUpdatedElement.textContent = `Last updated: ${userData.lastUpdated}`
-          }
-        }, 30000) // Update every 30 seconds
-      }
+  // Handle Enter key in name input
+  document.getElementById('name-input').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      document.getElementById('login-form').dispatchEvent(new Event('submit'));
+    }
+  });
 
-      // Modal logic
-      function showModal(modalId) {
-        document.getElementById(modalId).style.display = 'flex';
-      }
-      function closeModal(modalId) {
-        document.getElementById(modalId).style.display = 'none';
-      }
+  // Auto-focus the name input when page loads
+  window.addEventListener('load', function() {
+    document.getElementById('name-input').focus();
+    setUIText();
+  });
 
-      document.querySelector('.action-btn.primary').addEventListener('click', function() {
-        showModal('details-modal');
-      });
-      document.querySelector('.action-btn.secondary').addEventListener('click', function() {
-        showModal('funds-modal');
-      });
+  const translations = {
+  en: {
+    welcome: 'Welcome back',
+    accountTotal: 'Account Total',
+    currentBalance: 'Your current balance',
+    annualRate: 'Optimize Annual Rate',
+    projectedReturns: 'Projected returns',
+    earned: 'Earned',
+    thisMonth: 'This month',
+    interestOverview: 'Interest Overview',
+    accumulated: 'Accumulated',
+    totalEarned: 'Total earned to date',
+    pending: 'Pending this week',
+    weeklyAccrual: 'Weekly accrual',
+    details: 'View Details',
+    addFunds: 'Add Funds',
+    lastUpdated: 'Last updated',
+    loginTitle: 'Smart Interest',
+    loginSubtitle: 'Your Supersaving Dashboard',
+    nameLabel: "What's your name?",
+    loginBtn: 'Continue to Dashboard'
+  },
+  de: {
+    welcome: 'Willkommen zurück',
+    accountTotal: 'Gesamtkontostand',
+    currentBalance: 'Ihr aktueller Kontostand',
+    annualRate: 'Optimierter Jahreszins',
+    projectedReturns: 'Prognostizierte Rendite',
+    earned: 'Verdient',
+    thisMonth: 'Diesen Monat',
+    interestOverview: 'Zinsübersicht',
+    accumulated: 'Akkumuliert',
+    totalEarned: 'Bisher verdient',
+    pending: 'Ausstehend diese Woche',
+    weeklyAccrual: 'Wöchentliche Zinsgutschrift',
+    details: 'Details anzeigen',
+    addFunds: 'Geld hinzufügen',
+    lastUpdated: 'Zuletzt aktualisiert',
+    loginTitle: 'Smart Interest',
+    loginSubtitle: 'Ihr Superspar-Dashboard',
+    nameLabel: 'Wie heißen Sie?',
+    loginBtn: 'Zum Dashboard'
+  },
+  it: {
+    welcome: 'Bentornato',
+    accountTotal: 'Totale conto',
+    currentBalance: 'Il tuo saldo attuale',
+    annualRate: 'Tasso annuo ottimizzato',
+    projectedReturns: 'Rendimenti previsti',
+    earned: 'Guadagnato',
+    thisMonth: 'Questo mese',
+    interestOverview: 'Panoramica interessi',
+    accumulated: 'Accumulato',
+    totalEarned: 'Totale guadagnato',
+    pending: 'In sospeso questa settimana',
+    weeklyAccrual: 'Accredito settimanale',
+    details: 'Vedi dettagli',
+    addFunds: 'Aggiungi fondi',
+    lastUpdated: 'Ultimo aggiornamento',
+    loginTitle: 'Smart Interest',
+    loginSubtitle: 'La tua dashboard di risparmio',
+    nameLabel: 'Come ti chiami?',
+    loginBtn: 'Continua alla dashboard'
+  }
+};
 
-      document.querySelectorAll('.modal-close-btn').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-          closeModal(e.target.closest('.modal-overlay').id);
-        });
-      });
+const supportedLangs = ['en', 'de', 'it'];
+const lang = supportedLangs.includes(shortLocale) ? shortLocale : 'en';
+const t = translations[lang];
 
-      // Optional: close modal when clicking outside modal box
-      document.querySelectorAll('.modal-overlay').forEach(overlay => {
-        overlay.addEventListener('click', function(e) {
-          if (e.target === overlay) closeModal(overlay.id);
-        });
-      });
+function setUIText() {
+  document.getElementById('login-title').textContent = t.loginTitle;
+  document.getElementById('login-subtitle').textContent = t.loginSubtitle;
+  document.getElementById('name-input').placeholder = t.nameLabel;
+  document.getElementById('login-btn').textContent = t.loginBtn;
 
-      // Handle login form submission
-      document.getElementById('login-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const nameInput = document.getElementById('name-input');
-        const name = nameInput.value.trim();
-        
-        if (name) {
-          showDashboard(name);
-        }
-      });
+  document.getElementById('welcome-message').textContent = `${t.welcome}, ${userName || 'User'}`;
+  document.getElementById('account-total-title').textContent = t.accountTotal;
+  document.querySelector('.primary-card .card-subtitle').textContent = t.currentBalance;
+  document.querySelector('.rate-card .card-title').textContent = t.annualRate;
+  document.querySelector('.rate-card .card-subtitle').textContent = t.projectedReturns;
+  document.querySelector('.earned-card .card-title').textContent = t.earned;
+  document.querySelector('.earned-card .card-subtitle').textContent = t.thisMonth;
+  document.querySelector('.section-title').textContent = t.interestOverview;
+  document.querySelector('.interest-grid .card:nth-child(1) .card-title').textContent = t.accumulated;
+  document.querySelector('.interest-grid .card:nth-child(1) .card-subtitle').textContent = t.totalEarned;
+  document.querySelector('.interest-grid .card:nth-child(2) .card-title').textContent = t.pending;
+  document.querySelector('.interest-grid .card:nth-child(2) .card-subtitle').textContent = t.weeklyAccrual;
+  document.querySelector('.action-btn.primary').textContent = t.details;
+  document.querySelector('.action-btn.secondary').textContent = t.addFunds;
+  document.getElementById('last-updated').textContent = `${t.lastUpdated}: ${userData.lastUpdated}`;
 
-      // Handle Enter key in name input
-      document.getElementById('name-input').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-          e.preventDefault();
-          document.getElementById('login-form').dispatchEvent(new Event('submit'));
-        }
-      });
+  document.querySelector('.form-label').textContent = t.nameLabel;
+}
 
-      // Auto-focus the name input when page loads
-      window.addEventListener('load', function() {
-        document.getElementById('name-input').focus();
-      });
-    </script>
+setUIText();
+  </script>
   </body>
 </html>
