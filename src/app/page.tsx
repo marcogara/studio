@@ -177,7 +177,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-center mb-12 font-headline">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project: any, index) => (
-                <Card key={index} className="flex flex-col overflow-hidden hover:border-primary/50 transition-colors duration-300">
+                <Card key={index} className="flex flex-col overflow-hidden hover:border-primary/50 transition-colors duration-300 rounded-2xl">
                   <CardHeader className="p-0">
                     <div className="w-full h-48 relative bg-card">
                       {project.video ? (
