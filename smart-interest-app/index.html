@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Interest App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        input[type="text"], input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .button-group button {
+            background-color: #28a745;
+        }
+        .button-group button:hover {
+            background-color: #218838;
+        }
+        .button-group button.details {
+            background-color: #17a2b8;
+        }
+        .button-group button.details:hover {
+            background-color: #138496;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="login-container" class="container">
+        <h1>Welcome</h1>
+        <p>Please enter your name to begin.</p>
+        <div class="input-group">
+            <input type="text" id="name" placeholder="Your Name">
+        </div>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="main-container" class="container hidden">
+        <h2 id="welcome-message"></h2>
+        <p>Your current balance is: <strong>€1,234.56</strong></p>
+        <div class="button-group">
+            <button class="details" onclick="showDetails()">Details</button>
+            <button onclick="addFunds()">Add Funds</button>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            const name = document.getElementById('name').value;
+            if (name.trim() !== '') {
+                document.getElementById('login-container').classList.add('hidden');
+                document.getElementById('welcome-message').innerText = 'Welcome, ' + name + '!';
+                document.getElementById('main-container').classList.remove('hidden');
+            } else {
+                alert('Please enter your name.');
+            }
+        }
+
+        function showDetails() {
+            alert('Functionality to show account details would be implemented here.');
+        }
+
+        function addFunds() {
+            alert('Functionality to add funds would be implemented here.');
+        }
+    </script>
+
+</body>
+</html>
