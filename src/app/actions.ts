@@ -12,8 +12,8 @@ const contactSchema = z.object({
 });
 
 export async function sendContactMessage(values: z.infer<typeof contactSchema>) {
-  const { success: isRateLimited } = await rateLimit();
-  if (!isRateLimited) {
+  const { success: isAllowed } = await rateLimit();
+  if (!isAllowed) {
     return { success: false, error: "Too many requests. Please try again later." };
   }
   
