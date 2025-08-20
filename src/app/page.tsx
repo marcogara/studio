@@ -16,7 +16,7 @@ import { useState, useEffect } from "react";
 const projects = [
   {
     title: "Smart Interest App",
-    description: "A banking application for managing interest rates, built with a robust Java backend and a classic web frontend. Check out the repo for the backend.\n\nThis UI is for demonstration only. The Spring Boot backend is not live.",
+    description: "A banking application for managing interest rates, built with a robust Java backend and a classic web frontend. \nThis UI is for demonstration only. The Spring Boot backend is not live.\nCheck out the repo for the backend.",
     technologies: ["Java", "PostgreSQL", "HTML", "CSS", "JavaScript"],
     liveLink: "/smart-interest-app/index.html",
     repoLink: "https://github.com/marcogara/interest-optimisation-account",
