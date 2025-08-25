@@ -15,6 +15,16 @@ import { useState, useEffect } from "react";
 // Project Data
 const projects = [
   {
+    title: "Pharmaceutical Inventory Management System",
+    description: "A simple starter project to explore the Spring Bean lifecycle and use Thymeleaf templates for dynamic HTML rendering. \nThis project is meant to showcase how Spring manages beans and how to serve dynamic content in a clean, extendable way.",
+    technologies: ["Java", "Spring Beans", "HTML", "CSS", "JSON"],
+    liveLink: "/pharma-inventory",
+    liveLinkText: "Demo",
+    repoLink: "https://github.com/marcogara/pharmaceutical-inventory-management-system",
+    image: "/Meds.png",
+    imageHint: "finance banking",
+  },
+  {
     title: "Smart Interest App",
     description: "A banking application for managing interest rates, built with a robust Java backend and a classic web frontend. \nThis UI is for demonstration only. The Spring Boot backend is not live.\nCheck out the repo for the backend.",
     technologies: ["Java", "PostgreSQL", "HTML", "CSS", "JavaScript"],
