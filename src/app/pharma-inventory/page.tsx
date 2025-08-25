@@ -10,14 +10,11 @@ import { Play, Square } from "lucide-react";
 import { useState, useRef } from "react";
 
 export default function PharmaInventoryPage() {
-  const [videoSrc, setVideoSrc] = useState("");
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleStart = () => {
     const newSrc = "/pharma-inventory/screenStart.mp4";
-    setVideoSrc(newSrc);
     if (videoRef.current) {
-        // This ensures we load and play the new video
         videoRef.current.src = newSrc;
         videoRef.current.load();
         videoRef.current.play();
@@ -41,7 +38,7 @@ export default function PharmaInventoryPage() {
                 <CardTitle className="text-3xl font-bold font-headline">Pharmaceutical Inventory Management System</CardTitle>
                 <CardDescription className="text-lg text-muted-foreground pt-2">
                   A demonstration of the inventory management interface.
-                </Description>
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-8">
                 <div>
