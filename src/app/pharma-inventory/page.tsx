@@ -1,8 +1,12 @@
 
+"use client";
+
 import Image from "next/image";
 import { Header } from "@/components/header";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
+import { Play, Square } from "lucide-react";
 
 export default function PharmaInventoryPage() {
   return (
@@ -20,11 +24,11 @@ export default function PharmaInventoryPage() {
               </CardHeader>
               <CardContent className="space-y-8">
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4 text-center font-headline">Demonstration Window 1</h3>
+                  <h3 className="text-2xl font-semibold mb-4 text-center font-headline">Screen</h3>
                   <div className="aspect-video w-full bg-muted rounded-lg flex items-center justify-center">
                     <Image
                       src="https://placehold.co/600x400.png"
-                      alt="Placeholder Window 1"
+                      alt="Placeholder Screen"
                       width={600}
                       height={400}
                       className="w-full h-full object-cover rounded-lg"
@@ -36,18 +40,30 @@ export default function PharmaInventoryPage() {
                 <Separator />
 
                 <div>
-                   <h3 className="text-2xl font-semibold mb-4 text-center font-headline">Demonstration Window 2</h3>
+                   <h3 className="text-2xl font-semibold mb-4 text-center font-headline">Terminal</h3>
                    <div className="aspect-video w-full bg-muted rounded-lg flex items-center justify-center">
                     <Image
                       src="https://placehold.co/600x400.png"
-                      alt="Placeholder Window 2"
+                      alt="Placeholder Terminal"
                       width={600}
                       height={400}
                       className="w-full h-full object-cover rounded-lg"
-                      data-ai-hint="table data"
+                      data-ai-hint="code terminal"
                     />
                   </div>
                 </div>
+
+                <Separator />
+                
+                <div className="flex justify-center gap-4 pt-4">
+                  <Button size="lg">
+                    <Play className="mr-2" /> Start
+                  </Button>
+                  <Button size="lg" variant="destructive">
+                    <Square className="mr-2" /> Stop
+                  </Button>
+                </div>
+
               </CardContent>
             </Card>
           </div>
