@@ -7,17 +7,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Play, Square } from "lucide-react";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 
 export default function PharmaInventoryPage() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleStart = () => {
-    const newSrc = "/pharma-inventory/screenStart.mp4";
     if (videoRef.current) {
-        videoRef.current.src = newSrc;
-        videoRef.current.load();
-        videoRef.current.play();
+      // The video source is set directly in the video tag. 
+      // We just need to load and play it.
+      videoRef.current.load();
+      videoRef.current.play().catch(error => {
+        console.error("Video play failed:", error);
+      });
     }
   };
 
@@ -51,9 +53,21 @@ export default function PharmaInventoryPage() {
                       data-ai-hint="interface dashboard"
                       controls={false}
                     >
-                        Your browser does not support the video tag.
+                      <source src="/pharma-inventory/screenStart.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
                     </video>
                   </div>
+                </div>
+
+                <Separator />
+                
+                <div className="flex justify-center gap-4">
+                  <Button size="lg" onClick={handleStart}>
+                    <Play className="mr-2" /> Start
+                  </Button>
+                  <Button size="lg" variant="destructive" onClick={handleStop}>
+                    <Square className="mr-2" /> Stop
+                  </Button>
                 </div>
 
                 <Separator />
@@ -70,17 +84,6 @@ export default function PharmaInventoryPage() {
                       data-ai-hint="code terminal"
                     />
                   </div>
-                </div>
-
-                <Separator />
-                
-                <div className="flex justify-center gap-4 pt-4">
-                  <Button size="lg" onClick={handleStart}>
-                    <Play className="mr-2" /> Start
-                  </Button>
-                  <Button size="lg" variant="destructive" onClick={handleStop}>
-                    <Square className="mr-2" /> Stop
-                  </Button>
                 </div>
 
               </CardContent>
