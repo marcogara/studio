@@ -23,7 +23,7 @@ export default function PharmaInventoryPage() {
   const handleStop = () => {
     if (videoRef.current) {
       videoRef.current.pause();
-      videoRef.current.currentTime = 0; // Optional: Reset video to start
+      videoRef.current.currentTime = 0;
     }
   };
 
@@ -72,15 +72,12 @@ export default function PharmaInventoryPage() {
 
                 <div>
                    <h3 className="text-2xl font-semibold mb-4 text-center font-headline">Terminal</h3>
-                   <div className="aspect-video w-full bg-muted rounded-lg flex items-center justify-center">
-                    <Image
-                      src="https://placehold.co/600x400.png"
-                      alt="Placeholder Terminal"
-                      width={600}
-                      height={400}
-                      className="w-full h-full object-cover rounded-lg"
-                      data-ai-hint="code terminal"
-                    />
+                   <div className="w-full bg-black text-green-400 font-mono text-sm p-4">
+                    <p className="whitespace-pre-wrap">{'> C:\\Users\\Marco> java -jar PharmaInventory.jar'}</p>
+                    <p className="whitespace-pre-wrap">{'[INFO] Loading application...'}</p>
+                    <p className="whitespace-pre-wrap">{'[INFO] Connecting to database...'}</p>
+                    <p className="whitespace-pre-wrap">{'[INFO] Application ready.'}</p>
+                    <p className="whitespace-pre-wrap blinking-cursor">_</p>
                   </div>
                 </div>
 
@@ -92,3 +89,4 @@ export default function PharmaInventoryPage() {
     </div>
   );
 }
+

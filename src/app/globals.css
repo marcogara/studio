@@ -84,4 +84,17 @@
       transform: translateY(0);
     }
   }
+
+  .blinking-cursor {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: #39ff14; /* Or your preferred cursor color */
+    }
+  }
 }
