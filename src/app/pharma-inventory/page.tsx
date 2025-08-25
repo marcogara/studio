@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -14,9 +13,6 @@ export default function PharmaInventoryPage() {
 
   const handleStart = () => {
     if (videoRef.current) {
-      // The video source is set directly in the video tag. 
-      // We just need to load and play it.
-      videoRef.current.load();
       videoRef.current.play().catch(error => {
         console.error("Video play failed:", error);
       });
@@ -26,6 +22,7 @@ export default function PharmaInventoryPage() {
   const handleStop = () => {
     if (videoRef.current) {
       videoRef.current.pause();
+      videoRef.current.currentTime = 0; // Optional: Reset video to start
     }
   };
 
@@ -34,7 +31,7 @@ export default function PharmaInventoryPage() {
       <Header />
       <main className="flex-1">
         <div className="container mx-auto px-4 py-12 md:py-16">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <Card>
               <CardHeader className="text-center">
                 <CardTitle className="text-3xl font-bold font-headline">Pharmaceutical Inventory Management System</CardTitle>
