@@ -21,28 +21,46 @@ export default function PharmaInventoryPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-8">
-                <div>
-                  <h3 className="text-2xl font-semibold mb-4 text-center font-headline">Screen</h3>
-                  <div className="aspect-video w-full bg-muted rounded-lg flex items-center justify-center overflow-hidden">
-                    <Image
-                      src="/pharma-inventory/screenMed.png"
-                      alt="Pharmaceutical Inventory Screen"
-                      width={800}
-                      height={450}
-                      className="w-full h-auto object-cover"
-                      data-ai-hint="interface dashboard"
-                    />
+                <div className="max-w-2xl mx-auto">
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-4 text-center font-headline">Screen</h3>
+                    <div className="aspect-video w-full bg-muted rounded-lg flex items-center justify-center overflow-hidden">
+                      <Image
+                        src="/pharma-inventory/screenMed.png"
+                        alt="Pharmaceutical Inventory Screen"
+                        width={800}
+                        height={450}
+                        className="w-full h-auto object-cover"
+                        data-ai-hint="interface dashboard"
+                      />
+                    </div>
                   </div>
                 </div>
 
                 <Separator />
-
-                <div>
-                   <h3 className="text-2xl font-semibold mb-4 text-center font-headline">Terminal</h3>
+                
+                <div className="max-w-2xl mx-auto">
+                   <h3 className="text-2xl font-semibold mb-4 text-center font-headline">Terminal on Start</h3>
                     <div className="w-full bg-black rounded-lg overflow-hidden">
                       <Image
                         src="/pharma-inventory/terminalMed.png"
                         alt="Terminal for Pharmaceutical Inventory"
+                        width={800}
+                        height={450}
+                        className="w-full h-auto object-cover"
+                        data-ai-hint="terminal code"
+                      />
+                    </div>
+                </div>
+                
+                <Separator />
+                
+                <div className="max-w-2xl mx-auto">
+                   <h3 className="text-2xl font-semibold mb-4 text-center font-headline">Terminal on Stop</h3>
+                    <div className="w-full bg-black rounded-lg overflow-hidden">
+                      <Image
+                        src="/pharma-inventory/TerminalStop.png"
+                        alt="Terminal for Pharmaceutical Inventory on Stop"
                         width={800}
                         height={450}
                         className="w-full h-auto object-cover"
