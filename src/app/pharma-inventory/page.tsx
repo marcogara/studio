@@ -6,9 +6,18 @@ import { Header } from "@/components/header";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ChevronRight } from "lucide-react";
 
-const beanLifecycleIntroduction = "The Spring IoC container is responsible for managing the lifecycle of beans, from instantiation to destruction. Understanding this lifecycle is crucial for developing robust Spring applications, as it allows developers to hook into key phases to customize bean behavior.";
+const beanLifecycleIntroduction = "The Spring IoC container is responsible for managing the lifecycle of beans, from instantiation to destruction. Understanding this lifecycle is crucial for developing robust Spring applications, as it allows developers to hook into key phases to customize bean behavior. The five main steps are:";
+
+const lifecycleSteps = [
+    { name: "Instantiation", description: "The Spring container creates an instance of the bean." },
+    { name: "Populate Properties", description: "Spring injects dependencies and sets property values." },
+    { name: "Initialization", description: "The container calls initialization methods, such as those defined by awareness interfaces, post-processors, or custom init-methods." },
+    { name: "In Use", description: "The bean is ready to be used by the application." },
+    { name: "Destruction", description: "Before the bean is destroyed, the container calls any configured destruction callbacks (e.g., destroy-method)." },
+];
+
 
 export default function PharmaInventoryPage() {
   return (
@@ -28,7 +37,7 @@ export default function PharmaInventoryPage() {
                 <div className="max-w-2xl mx-auto">
                   <div>
                     <h3 className="text-2xl font-semibold mb-4 text-center font-headline">Screen</h3>
-                    <div className="aspect-video w-full bg-muted rounded-lg flex items-center justify-center overflow-hidden">
+                    <div className="w-full bg-muted rounded-lg flex items-center justify-center overflow-hidden">
                       <Image
                         src="/pharma-inventory/screenMed.png"
                         alt="Pharmaceutical Inventory Screen"
@@ -79,15 +88,28 @@ export default function PharmaInventoryPage() {
             <div className="mt-8">
                 <Card>
                     <CardHeader>
-                        <CardTitle className="text-2xl font-bold font-headline text-center">Spring Bean Lifecycle</CardTitle>
+                        <CardTitle className="text-2xl font-bold font-headline text-center">The Spring Bean Lifecycle</CardTitle>
                     </CardHeader>
-                    <CardContent className="text-center space-y-4">
-                        <p className="text-foreground/80">{beanLifecycleIntroduction}</p>
-                        <Button asChild>
-                            <a href="/pharma-inventory/bean-lifecycle-explanation.md" target="_blank" rel="noopener noreferrer">
-                                Read More <ExternalLink className="ml-2 h-4 w-4" />
-                            </a>
-                        </Button>
+                    <CardContent className="space-y-6">
+                        <p className="text-center text-foreground/80">{beanLifecycleIntroduction}</p>
+                        <ul className="space-y-4">
+                            {lifecycleSteps.map((step, index) => (
+                                <li key={index} className="flex items-start">
+                                    <ChevronRight className="h-5 w-5 text-primary mt-1 mr-2 shrink-0" />
+                                    <div>
+                                        <h4 className="font-semibold">{step.name}</h4>
+                                        <p className="text-muted-foreground">{step.description}</p>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                        <div className="text-center pt-4">
+                            <Button asChild>
+                                <a href="/pharma-inventory/bean-lifecycle-explanation.md" target="_blank" rel="noopener noreferrer">
+                                    Read Full Explanation <ExternalLink className="ml-2 h-4 w-4" />
+                                </a>
+                            </Button>
+                        </div>
                     </CardContent>
                 </Card>
             </div>
