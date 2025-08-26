@@ -12,10 +12,10 @@ const beanLifecycleIntroduction = "The Spring IoC container is responsible for m
 
 const lifecycleSteps = [
     { name: "Instantiation", description: "The Spring container creates an instance of the bean." },
-    { name: "Populate Properties", description: "Spring injects dependencies and sets property values." },
-    { name: "Initialization", description: "The container calls initialization methods, such as those defined by awareness interfaces, post-processors, or custom init-methods." },
+    { name: "Dependency Injection (Populate Properties)", description: "Spring injects dependencies and sets property values." },
+    { name: "Initialization (@PostConstruct)", description: "The container calls initialization methods, such as those defined by awareness interfaces, post-processors, or custom init-methods." },
     { name: "In Use", description: "The bean is ready to be used by the application." },
-    { name: "Destruction", description: "Before the bean is destroyed, the container calls any configured destruction callbacks (e.g., destroy-method)." },
+    { name: "Destruction (@PreDestroy)", description: "Before the bean is destroyed, the container calls any configured destruction callbacks (e.g., destroy-method)." },
 ];
 
 
