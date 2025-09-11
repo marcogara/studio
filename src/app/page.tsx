@@ -136,8 +136,9 @@ export default function Home() {
           </section>
 
           <Quote
-            text="Programming isn't about what you know; it's about what you can figure out."
-            author="Chris Pine"
+            text="Die Kombination von Low-Code und KI wird die Zukunft der Softwareentwicklung sein."
+            author="Karsten Noack"
+            title="Scopeland Technology GmbH Gründer & CVO"
           />
 
           <Separator className="my-16" />
@@ -253,7 +254,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
