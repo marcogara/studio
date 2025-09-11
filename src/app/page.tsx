@@ -91,7 +91,7 @@ const languagesAndFrameworks = [
 ];
 
 const toolsAndTechnologies = [
-  "IntelliJ", "VS Code", "NetBeans", "Git", "UML", "SQL", "PostgreSQL", "Linux", "AutoCAD"
+  "IntelliJ", "VS Code", "NetBeans", "Git", "UML", "SQL", "PostgreSQL", "Linux", "AutoCAD", "Low-code"
 ];
 
 export default function Home() {
