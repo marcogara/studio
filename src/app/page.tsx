@@ -18,7 +18,7 @@ const projects = [
     title: "MetroRail v.01",
     description: "An interactive simulation of a metropolitan rail system, showcasing dynamic train animations and route visualizations using modern web technologies.",
     technologies: ["JavaScript", "HTML", "CSS"],
-    liveLink: "/metrorail-v01/index.html",
+    liveLink: "https://marcogara.github.io/pages/2025/metro-m2/index.html",
     liveLinkText: "Demo",
     repoLink: "#",
     image: "https://picsum.photos/seed/metrorail1/600/400",
@@ -274,5 +274,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
