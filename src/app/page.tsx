@@ -27,11 +27,12 @@ const projects = [
   },
   {
     title: "MetroRail v.02",
-    description: "The next iteration of the MetroRail project, featuring an improved UI, real-time data integration capabilities, and enhanced performance for a smoother user experience.",
+    description: "The next iteration of the MetroRail project, featuring an improved UI, real-time data integration capabilities, and enhanced performance for a smoother user experience. This version can differentiate between trams and is being developed for full timetable synchronization.",
     technologies: ["JavaScript", "HTML", "CSS"],
     liveLink: "https://marcogara.github.io/pages/2025/metro-m2-V02/index.html",
     liveLinkText: "Demo",
     repoLink: "#",
+    repoUnavailable: true,
     image: "https://picsum.photos/seed/metrorail2/600/400",
     imageHint: "modern train interface",
   },
@@ -275,3 +276,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
