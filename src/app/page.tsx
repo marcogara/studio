@@ -28,7 +28,7 @@ const projects = [
     title: "MetroRail v.02",
     description: "The next iteration of the MetroRail project, featuring an improved UI, real-time data integration capabilities, and enhanced performance for a smoother user experience.",
     technologies: ["JavaScript", "HTML", "CSS"],
-    liveLink: "/metrorail-v02/index.html",
+    liveLink: "https://marcogara.github.io/pages/2025/metro-m2-V02/index.html",
     liveLinkText: "Demo",
     repoLink: "#",
     image: "https://picsum.photos/seed/metrorail2/600/400",
@@ -274,6 +274,8 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
 
