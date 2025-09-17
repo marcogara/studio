@@ -16,11 +16,12 @@ import { useState, useEffect } from "react";
 const projects = [
    {
     title: "MetroRail v.01",
-    description: "An interactive simulation of a metropolitan rail system, showcasing dynamic train animations and route visualizations using modern web technologies.",
+    description: "A visualization tool for Berlin's M2 metro line. It suggests the best station to walk to for time savings and tracks the real-time movement of all M2 trams along the line.",
     technologies: ["JavaScript", "HTML", "CSS"],
     liveLink: "https://marcogara.github.io/pages/2025/metro-m2/index.html",
     liveLinkText: "Demo",
     repoLink: "#",
+    repoUnavailable: true,
     image: "https://picsum.photos/seed/metrorail1/600/400",
     imageHint: "train metro map",
   },
@@ -243,7 +244,7 @@ export default function Home() {
                   </CardContent>
                   <CardFooter className="p-6 bg-card-foreground/5">
                     <div className="w-full flex justify-between items-center gap-4">
-                       <Button asChild variant="outline" size="sm">
+                       <Button asChild variant="outline" size="sm" disabled={project.repoUnavailable}>
                         <a href={project.repoLink} target="_blank" rel="noopener noreferrer"><Github className="mr-2 h-4 w-4" /> {project.repoLinkText || 'Repo'}</a>
                       </Button>
                        <Button asChild size="sm">
@@ -274,9 +275,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
-
-    
