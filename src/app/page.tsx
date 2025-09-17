@@ -14,6 +14,26 @@ import { useState, useEffect } from "react";
 
 // Project Data
 const projects = [
+   {
+    title: "MetroRail v.01",
+    description: "An interactive simulation of a metropolitan rail system, showcasing dynamic train animations and route visualizations using modern web technologies.",
+    technologies: ["JavaScript", "HTML", "CSS"],
+    liveLink: "/metrorail-v01/index.html",
+    liveLinkText: "Demo",
+    repoLink: "#",
+    image: "https://picsum.photos/seed/metrorail1/600/400",
+    imageHint: "train metro map",
+  },
+  {
+    title: "MetroRail v.02",
+    description: "The next iteration of the MetroRail project, featuring an improved UI, real-time data integration capabilities, and enhanced performance for a smoother user experience.",
+    technologies: ["JavaScript", "HTML", "CSS"],
+    liveLink: "/metrorail-v02/index.html",
+    liveLinkText: "Demo",
+    repoLink: "#",
+    image: "https://picsum.photos/seed/metrorail2/600/400",
+    imageHint: "modern train interface",
+  },
   {
     title: "Pharmaceutical Inventory Management System",
     description: "A simple starter project to explore the Spring Bean lifecycle and use Thymeleaf templates for dynamic HTML rendering. \nThis project is meant to showcase how Spring manages beans and how to serve dynamic content in a clean, extendable way.",
@@ -254,3 +274,5 @@ export default function Home() {
     </div>
   );
 }
+
+    

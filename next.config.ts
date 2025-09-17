@@ -21,9 +21,17 @@ const nextConfig: NextConfig = {
         hostname: 'marcogara.github.io',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
 };
 
 export default nextConfig;
+
+    
