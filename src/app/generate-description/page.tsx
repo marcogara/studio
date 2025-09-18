@@ -1,7 +1,6 @@
 import { Header } from "@/components/header";
 import { GenerateDescriptionForm } from "@/components/generate-description-form";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Quote } from "@/components/quote";
 
 export default function GenerateDescriptionPage() {
   return (
@@ -22,10 +21,6 @@ export default function GenerateDescriptionPage() {
               </CardContent>
             </Card>
           </div>
-          <Quote
-            text="The computer was born to solve problems that did not exist before."
-            author="Bill Gates"
-          />
         </div>
       </main>
     </div>
