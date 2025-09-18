@@ -158,9 +158,8 @@ export default function Home() {
           </section>
 
           <Quote
-            text="Die Kombination von Low-Code und KI wird die Zukunft der Softwareentwicklung sein."
-            author="Karsten Noack"
-            title="Scopeland Technology GmbH Gründer & CVO"
+            text="Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
+            author="Robert C. Martin"
           />
 
           <Separator className="my-16" />

@@ -23,8 +23,8 @@ export default function GenerateDescriptionPage() {
             </Card>
           </div>
           <Quote
-            text="Programming isn't about what you know; it's about what you can figure out."
-            author="Chris Pine"
+            text="The computer was born to solve problems that did not exist before."
+            author="Bill Gates"
           />
         </div>
       </main>
