@@ -11,19 +11,22 @@ import { ContactForm } from "@/components/contact-form";
 import { Separator } from "@/components/ui/separator";
 import { Quote } from "@/components/quote";
 import { useState, useEffect } from "react";
+import placeholderImagesData from "@/lib/placeholder-images.json";
+
+const placeholderImages = placeholderImagesData;
 
 // Project Data
 const projects = [
    {
-    title: "MetroRail v.01",
-    description: "A visualization tool for Berlin's M2 metro line. It suggests the best station to walk to for time savings and tracks the real-time movement of all M2 trams along the line.",
-    technologies: ["JavaScript", "HTML", "CSS"],
-    liveLink: "https://marcogara.github.io/pages/2025/metro-m2/index.html",
+    title: "Supplements Taxi",
+    description: "A sleek and modern e-commerce prototype for a supplement delivery service, inspired by VitaminTaxi. Built with a focus on clean UI and a smooth user experience.",
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    liveLink: "/supplements-taxi",
     liveLinkText: "Demo",
     repoLink: "#",
     repoUnavailable: true,
-    image: "https://picsum.photos/seed/metrorail1/600/400",
-    imageHint: "train metro map",
+    image: placeholderImages.supplementsHero.src,
+    imageHint: placeholderImages.supplementsHero.hint,
   },
   {
     title: "MetroRail v.02",
@@ -275,5 +278,3 @@ export default function Home() {
     </div>
   );
 }
-
-    

@@ -1,0 +1,30 @@
+{
+  "supplementsHero": {
+    "src": "https://picsum.photos/seed/supplements/1200/800",
+    "hint": "supplements vitamins"
+  },
+  "supplement1": {
+    "src": "https://picsum.photos/seed/vitaminC/400/400",
+    "hint": "vitamin bottle"
+  },
+  "supplement2": {
+    "src": "https://picsum.photos/seed/vitaminD/400/400",
+    "hint": "supplement pills"
+  },
+  "supplement3": {
+    "src": "https://picsum.photos/seed/protein/400/400",
+    "hint": "protein powder"
+  },
+  "supplement4": {
+    "src": "https://picsum.photos/seed/omega3/400/400",
+    "hint": "fish oil"
+  },
+  "supplement5": {
+    "src": "https://picsum.photos/seed/multivitamin/400/400",
+    "hint": "vitamins"
+  },
+  "supplement6": {
+    "src": "https://picsum.photos/seed/creatine/400/400",
+    "hint": "fitness supplement"
+  }
+}
