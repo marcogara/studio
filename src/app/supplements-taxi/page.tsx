@@ -3,9 +3,11 @@ import Image from "next/image";
 import { Header } from "@/components/header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { placeholderImages } from "@/lib/placeholder-images";
+import placeholderImagesData from "@/lib/placeholder-images.json";
 import { Separator } from "@/components/ui/separator";
 import { ArrowRight, ShoppingCart, Zap } from "lucide-react";
+
+const placeholderImages = placeholderImagesData;
 
 const products = [
   { name: "Vitamin C Boost", price: "12.99", image: placeholderImages.supplement1 },
