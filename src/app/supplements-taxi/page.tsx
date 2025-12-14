@@ -4,7 +4,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import placeholderImagesData from "@/lib/placeholder-images.json";
+import placeholderImagesData from "./placeholder-images.json";
 import { Separator } from "@/components/ui/separator";
 import { ArrowRight, ShoppingCart, Zap, Package, Leaf, Phone, Mail, Menu } from "lucide-react";
 import Link from "next/link";

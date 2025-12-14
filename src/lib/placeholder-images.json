@@ -2,29 +2,5 @@
   "supplementsHero": {
     "src": "https://picsum.photos/seed/workplaceHealth/1200/800",
     "hint": "workplace wellness"
-  },
-  "supplement1": {
-    "src": "https://picsum.photos/seed/vitaminC/400/400",
-    "hint": "vitamin c"
-  },
-  "supplement2": {
-    "src": "https://picsum.photos/seed/vitaminD/400/400",
-    "hint": "vitamin d"
-  },
-  "supplement3": {
-    "src": "https://picsum.photos/seed/proteinPowder/400/400",
-    "hint": "protein powder"
-  },
-  "supplement4": {
-    "src": "https://picsum.photos/seed/fishOil/400/400",
-    "hint": "fish oil"
-  },
-  "supplement5": {
-    "src": "https://picsum.photos/seed/dailyVitamins/400/400",
-    "hint": "multivitamin"
-  },
-  "supplement6": {
-    "src": "https://picsum.photos/seed/creatinePowder/400/400",
-    "hint": "creatine powder"
   }
 }
