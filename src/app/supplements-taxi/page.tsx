@@ -1,11 +1,14 @@
 
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import placeholderImagesData from "@/lib/placeholder-images.json";
 import { Separator } from "@/components/ui/separator";
-import { ArrowRight, ShoppingCart, Zap, Package, Leaf, Phone, Mail } from "lucide-react";
+import { ArrowRight, ShoppingCart, Zap, Package, Leaf, Phone, Mail, Menu } from "lucide-react";
 import Link from "next/link";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const placeholderImages: any = placeholderImagesData;
 
@@ -18,6 +21,46 @@ const products = [
   { name: "Performance Creatine", price: "22.00", image: placeholderImages.supplement6 },
 ];
 
+function MobileNav() {
+    return (
+        <Sheet>
+            <SheetTrigger asChild>
+                <Button variant="outline" size="icon" className="md:hidden">
+                    <Menu className="h-5 w-5" />
+                    <span className="sr-only">Toggle navigation menu</span>
+                </Button>
+            </SheetTrigger>
+            <SheetContent side="left">
+                <nav className="grid gap-6 text-lg font-medium mt-8">
+                    <Link
+                        href="#"
+                        className="flex items-center gap-2 text-lg font-semibold"
+                    >
+                        <Leaf className="h-7 w-7 text-primary" />
+                        <span className="sr-only">Supplements Taxi</span>
+                    </Link>
+                    <Link
+                        href="#"
+                        className="text-muted-foreground hover:text-foreground"
+                    >
+                        Products
+                    </Link>
+                    <Link
+                        href="#"
+                        className="text-muted-foreground hover:text-foreground"
+                    >
+                        About
+                    </Link>
+                     <Button>
+                        <ShoppingCart className="mr-2 h-5 w-5" />
+                        Cart
+                    </Button>
+                </nav>
+            </SheetContent>
+        </Sheet>
+    )
+}
+
 function SupplementsHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -27,12 +70,15 @@ function SupplementsHeader() {
           <span className="font-bold text-2xl font-headline">Supplements Taxi</span>
         </Link>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button variant="ghost">Products</Button>
-          <Button variant="ghost">About</Button>
-          <Button>
-            <ShoppingCart className="mr-2 h-5 w-5" />
-            Cart
-          </Button>
+          <nav className="hidden md:flex md:items-center md:space-x-4">
+            <Button variant="ghost">Products</Button>
+            <Button variant="ghost">About</Button>
+             <Button>
+                <ShoppingCart className="mr-2 h-5 w-5" />
+                Cart
+            </Button>
+          </nav>
+          <MobileNav />
         </div>
       </div>
     </header>
