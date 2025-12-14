@@ -1,11 +1,11 @@
 {
   "supplementsHero": {
-    "src": "https://picsum.photos/seed/supplements/1200/800",
-    "hint": "supplements vitamins"
+    "src": "https://picsum.photos/seed/workplaceHealth/1200/800",
+    "hint": "workplace wellness"
   },
   "supplement1": {
-    "src": "https://picsum.photos/seed/vitaminC/400/400",
-    "hint": "vitamin bottle"
+    "src": "https://picsum.photos/seed/supplements/400/400",
+    "hint": "supplements vitamins"
   },
   "supplement2": {
     "src": "https://picsum.photos/seed/vitaminD/400/400",
