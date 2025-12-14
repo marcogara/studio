@@ -134,8 +134,8 @@ export default function SupplementsTaxiPage() {
           <div>
             <h4 className="font-bold text-lg mb-4 font-headline">Supplements Taxi</h4>
             <address className="not-italic text-muted-foreground">
-              Am Waller Freihafen 1<br />
-              28217 Bremen<br />
+              Kurfürstendamm 123<br />
+              10719 Berlin<br />
               Deutschland
             </address>
             <div className="flex items-center gap-4 mt-4">
