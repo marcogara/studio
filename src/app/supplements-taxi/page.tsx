@@ -106,7 +106,7 @@ export default function SupplementsTaxiPage() {
               Your Daily Dose of Health
             </h1>
             <p className="mt-4 text-xl md:text-2xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
-              High-quality supplements, delivered to your door in minutes.
+              High-quality supplements, delivered to your office in minutes.
             </p>
             <Button size="lg" className="mt-8">
               Shop Bestsellers <ArrowRight className="ml-2" />
