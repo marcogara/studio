@@ -13,7 +13,7 @@ import { Quote } from "@/components/quote";
 import { useState, useEffect } from "react";
 import placeholderImagesData from "@/lib/placeholder-images.json";
 
-const placeholderImages = placeholderImagesData;
+const placeholderImages: any = placeholderImagesData;
 
 // Project Data
 const projects = [
