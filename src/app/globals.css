@@ -57,6 +57,29 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
+  .theme-supplements {
+    --background: 0 0% 98%;
+    --foreground: 210 10% 23%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 10% 23%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 10% 23%;
+    --primary: 140 80% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 4% 90%;
+    --secondary-foreground: 210 10% 23%;
+    --muted: 210 4% 96%;
+    --muted-foreground: 210 4% 65%;
+    --accent: 140 80% 35%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 4% 89%;
+    --input: 210 4% 89%;
+    --ring: 140 80% 45%;
+    --radius: 0.8rem;
+  }
 }
 
 @layer base {
