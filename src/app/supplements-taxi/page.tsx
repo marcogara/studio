@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import placeholderImagesData from "@/lib/placeholder-images.json";
 import { Separator } from "@/components/ui/separator";
-import { ArrowRight, ShoppingCart, Zap, Package, Leaf } from "lucide-react";
+import { ArrowRight, ShoppingCart, Zap, Package, Leaf, Phone, Mail } from "lucide-react";
 import Link from "next/link";
 
 const placeholderImages: any = placeholderImagesData;
@@ -126,14 +126,56 @@ export default function SupplementsTaxiPage() {
             </div>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="py-12 bg-card text-card-foreground border-t">
-            <div className="container mx-auto px-4 text-center">
-                <p className="text-muted-foreground">&copy; {new Date().getFullYear()} Supplements Taxi. All rights reserved.</p>
-            </div>
-        </footer>
       </main>
+
+      {/* Footer */}
+      <footer className="py-16 bg-card text-card-foreground border-t">
+        <div className="container mx-auto px-4 grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+          <div>
+            <h4 className="font-bold text-lg mb-4 font-headline">Supplements Taxi</h4>
+            <address className="not-italic text-muted-foreground">
+              Am Waller Freihafen 1<br />
+              28217 Bremen<br />
+              Deutschland
+            </address>
+            <div className="flex items-center gap-4 mt-4">
+              <a href="tel:+4900000000" aria-label="Call us" className="text-muted-foreground hover:text-primary transition-colors">
+                <Phone className="h-5 w-5" />
+              </a>
+              <a href="mailto:info@supplementstaxi.de" aria-label="Email us" className="text-muted-foreground hover:text-primary transition-colors">
+                <Mail className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-bold text-lg mb-4 font-headline">Content</h4>
+            <ul className="space-y-2">
+              <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Our Story</Link></li>
+              <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Delivery Areas</Link></li>
+              <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
+              <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Careers</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-bold text-lg mb-4 font-headline">Legal</h4>
+            <ul className="space-y-2">
+              <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Imprint</Link></li>
+              <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms & Conditions</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-bold text-lg mb-4 font-headline">Opening Hours</h4>
+            <div className="text-muted-foreground">
+              <p><strong>Mon - Fri:</strong><br />07:00 – 18:00</p>
+              <p className="mt-2"><strong>Sat & Sun:</strong><br />Closed</p>
+            </div>
+          </div>
+        </div>
+        <div className="container mx-auto px-4 mt-12 pt-8 border-t border-muted/50 text-center">
+            <p className="text-muted-foreground text-xs">&copy; {new Date().getFullYear()} Supplements Taxi. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }
