@@ -4,27 +4,27 @@
     "hint": "workplace wellness"
   },
   "supplement1": {
-    "src": "https://picsum.photos/seed/supplements/400/400",
-    "hint": "supplements vitamins"
+    "src": "https://picsum.photos/seed/vitaminC/400/400",
+    "hint": "vitamin c"
   },
   "supplement2": {
     "src": "https://picsum.photos/seed/vitaminD/400/400",
-    "hint": "supplement pills"
+    "hint": "vitamin d"
   },
   "supplement3": {
-    "src": "https://picsum.photos/seed/protein/400/400",
+    "src": "https://picsum.photos/seed/proteinPowder/400/400",
     "hint": "protein powder"
   },
   "supplement4": {
-    "src": "https://picsum.photos/seed/omega3/400/400",
+    "src": "https://picsum.photos/seed/fishOil/400/400",
     "hint": "fish oil"
   },
   "supplement5": {
-    "src": "https://picsum.photos/seed/multivitamin/400/400",
-    "hint": "vitamins"
+    "src": "https://picsum.photos/seed/dailyVitamins/400/400",
+    "hint": "multivitamin"
   },
   "supplement6": {
-    "src": "https://picsum.photos/seed/creatine/400/400",
-    "hint": "fitness supplement"
+    "src": "https://picsum.photos/seed/creatinePowder/400/400",
+    "hint": "creatine powder"
   }
 }
