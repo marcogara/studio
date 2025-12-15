@@ -11,12 +11,12 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
 const products = [
-  { name: "Vitamin C Boost", price: "12.99", image: { src: "/supplement-taxi/Essentials_minerals.png", hint: "vitamin c" } },
+  { name: "MultiVitamin Combo Boost Basic", price: "12.99", image: { src: "/supplement-taxi/Essentials_minerals.png", hint: "vitamin c" } },
+  { name: "MultiVitamin Combo Boost Value", price: "22.99", image: { src: "/supplement-taxi/Essentials_minerals.png", hint: "vitamin c" } },
+  { name: "MultiVitamin Combo Boost Premium", price: "32.99", image: { src: "/supplement-taxi/Essentials_minerals.png", hint: "vitamin c" } },
+  { name: "Omega-3 Essentials", price: "24.50", image: { src: "/supplement-taxi/Omega3.png", hint: "fish oil" } },
   { name: "Sunshine Vitamin D", price: "15.49", image: { src: "/supplement-taxi/VitaminD.png", hint: "vitamin d" } },
   { name: "Plant-Based Protein", price: "29.99", image: { src: "/Essentials_minerals.png", hint: "protein powder" } },
-  { name: "Omega-3 Essentials", price: "24.50", image: { src: "/supplement-taxi/Omega3.png", hint: "fish oil" } },
-  { name: "Daily Multivitamin", price: "19.99", image: { src: "/Essentials_minerals.png", hint: "multivitamin" } },
-  { name: "Performance Creatine", price: "22.00", image: { src: "/Essentials_minerals.png", hint: "creatine powder" } },
 ];
 
 function MobileNav() {
@@ -104,7 +104,7 @@ export default function SupplementsTaxiPage() {
               Your Daily Dose of Health
             </h1>
             <p className="mt-4 text-xl md:text-2xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
-              High-quality supplements, delivered to your office in minutes.
+              High-quality supplements, delivered to your door in the coming days.
             </p>
             <Button size="lg" className="mt-8">
               Shop Bestsellers <ArrowRight className="ml-2" />
@@ -117,8 +117,8 @@ export default function SupplementsTaxiPage() {
           <div className="container mx-auto px-4 grid md:grid-cols-3 gap-12 text-center">
              <div className="flex flex-col items-center">
                 <Zap className="h-10 w-10 text-primary" />
-                <h3 className="text-2xl font-bold font-headline mt-4">Fast Delivery</h3>
-                <p className="mt-2 text-muted-foreground">Get your order in minutes, not days. We're faster than your average delivery service.</p>
+                <h3 className="text-2xl font-bold font-headline mt-4">Reliable Delivery</h3>
+                <p className="mt-2 text-muted-foreground">Your order will be delivered reliably within the next few business days.</p>
             </div>
              <div className="flex flex-col items-center">
                 <Package className="h-10 w-10 text-primary" />
