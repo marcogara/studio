@@ -4,21 +4,18 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import placeholderImagesData from "./placeholder-images.json";
 import { Separator } from "@/components/ui/separator";
 import { ArrowRight, ShoppingCart, Zap, Package, Leaf, Phone, Mail, Menu } from "lucide-react";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-const placeholderImages: any = placeholderImagesData;
-
 const products = [
-  { name: "Vitamin C Boost", price: "12.99", image: placeholderImages.supplement1 },
-  { name: "Sunshine Vitamin D", price: "15.49", image: placeholderImages.supplement2 },
-  { name: "Plant-Based Protein", price: "29.99", image: placeholderImages.supplement3 },
-  { name: "Omega-3 Essentials", price: "24.50", image: placeholderImages.supplement4 },
-  { name: "Daily Multivitamin", price: "19.99", image: placeholderImages.supplement5 },
-  { name: "Performance Creatine", price: "22.00", image: placeholderImages.supplement6 },
+  { name: "Vitamin C Boost", price: "12.99", image: { src: "/Essentials_minerals.png", hint: "vitamin c" } },
+  { name: "Sunshine Vitamin D", price: "15.49", image: { src: "/Essentials_minerals.png", hint: "vitamin d" } },
+  { name: "Plant-Based Protein", price: "29.99", image: { src: "/Essentials_minerals.png", hint: "protein powder" } },
+  { name: "Omega-3 Essentials", price: "24.50", image: { src: "/Essentials_minerals.png", hint: "fish oil" } },
+  { name: "Daily Multivitamin", price: "19.99", image: { src: "/Essentials_minerals.png", hint: "multivitamin" } },
+  { name: "Performance Creatine", price: "22.00", image: { src: "/Essentials_minerals.png", hint: "creatine powder" } },
 ];
 
 function MobileNav() {
@@ -94,11 +91,11 @@ export default function SupplementsTaxiPage() {
         {/* Hero Section */}
         <section className="relative h-[60vh] w-full flex items-center justify-center text-center text-white">
           <Image
-            src={placeholderImages.supplementsHero.src}
+            src={"https://picsum.photos/seed/workplaceHealth/1200/800"}
             alt="Supplements"
             fill
             className="object-cover"
-            data-ai-hint={placeholderImages.supplementsHero.hint}
+            data-ai-hint={"workplace wellness"}
           />
           <div className="absolute inset-0 bg-black/60" />
           <div className="relative z-10 p-4">
