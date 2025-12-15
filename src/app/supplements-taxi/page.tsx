@@ -8,12 +8,13 @@ import { Separator } from "@/components/ui/separator";
 import { ArrowRight, ShoppingCart, Zap, Package, Leaf, Phone, Mail, Menu } from "lucide-react";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
 
 const products = [
-  { name: "Vitamin C Boost", price: "12.99", image: { src: "/Essentials_minerals.png", hint: "vitamin c" } },
-  { name: "Sunshine Vitamin D", price: "15.49", image: { src: "/Essentials_minerals.png", hint: "vitamin d" } },
+  { name: "Vitamin C Boost", price: "12.99", image: { src: "/supplement-taxi/Essentials_minerals.png", hint: "vitamin c" } },
+  { name: "Sunshine Vitamin D", price: "15.49", image: { src: "/supplement-taxi/VitaminD.png", hint: "vitamin d" } },
   { name: "Plant-Based Protein", price: "29.99", image: { src: "/Essentials_minerals.png", hint: "protein powder" } },
-  { name: "Omega-3 Essentials", price: "24.50", image: { src: "/Essentials_minerals.png", hint: "fish oil" } },
+  { name: "Omega-3 Essentials", price: "24.50", image: { src: "/supplement-taxi/Omega3.png", hint: "fish oil" } },
   { name: "Daily Multivitamin", price: "19.99", image: { src: "/Essentials_minerals.png", hint: "multivitamin" } },
   { name: "Performance Creatine", price: "22.00", image: { src: "/Essentials_minerals.png", hint: "creatine powder" } },
 ];
@@ -140,12 +141,14 @@ export default function SupplementsTaxiPage() {
               {products.map((product) => (
                 <Card key={product.name} className="overflow-hidden flex flex-col rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <CardHeader className="p-0">
-                    <div className="aspect-square w-full relative">
+                    <div className={cn("aspect-square w-full relative", {
+                        "p-4": product.name === "Sunshine Vitamin D" || product.name === "Omega-3 Essentials",
+                      })}>
                       <Image
                         src={product.image.src}
                         alt={product.name}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                         data-ai-hint={product.image.hint}
                       />
                     </div>
