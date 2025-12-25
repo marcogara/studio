@@ -135,7 +135,7 @@ export default function Home() {
           <section id="hero" className="text-center fade-in mb-20 md:mb-24">
             <div className="flex justify-center mb-6">
                <Image
-                src="/profile.png"
+                src="/profile_.png"
                 alt="Profile Picture"
                 width={128}
                 height={128}
