@@ -158,6 +158,16 @@ export default function SocLevel1Page() {
                             <li><span className="font-semibold text-foreground/90">Date</span> - the date when the email was sent</li>
                             <li><span className="font-semibold text-foreground/90">To</span> - the recipient's email address</li>
                           </ul>
+                          <div className="mt-6 space-y-2">
+                            <p className="text-foreground/80 text-left text-sm">
+                              Below is an additional resource from Media Template on how to analyze email headers:
+                            </p>
+                             <Button asChild variant="link" className="p-0 h-auto">
+                                <a href="https://web.archive.org/web/20221219232959/https://mediatemple.net/community/products/all/204643950/understanding-an-email-header" target="_blank" rel="noopener noreferrer">
+                                  Understanding an Email Header <ExternalLink className="ml-2 h-4 w-4" />
+                                </a>
+                              </Button>
+                          </div>
                         </div>
                       </div>
                     </AccordionContent>
