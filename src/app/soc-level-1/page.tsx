@@ -82,20 +82,24 @@ export default function SocLevel1Page() {
                   </AccordionItem>
                   
                   <AccordionItem value="item-3">
-                    <AccordionTrigger className="text-xl font-semibold font-headline">Your Daily Duties</AccordionTrigger>
+                    <AccordionTrigger className="text-xl font-semibold font-headline">Junior Security Analyst Intro</AccordionTrigger>
                     <AccordionContent>
                       <div className="space-y-4 py-4">
                         <p className="text-foreground/80 text-left">
-                            As a Junior Security Analyst, also called a SOC Level 1 Analyst, you work in a 24/7 SOC team and mostly review the security alerts together with your colleagues. To do it efficiently, you will need practice and skills learned through this path. During your work shift, you would typically:
+                            As a Junior Security Analyst, also called a SOC Level 1 Analyst, you work in a 24/7 SOC team and mostly review the security alerts together with your colleagues. To do it efficiently, you will need practice and skills learned through this path.
                         </p>
-                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                            {dailyDuties.map((duty) => (
-                                <li key={duty} className="flex items-start">
-                                    <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-1" />
-                                    <span className="text-foreground/90">{duty}</span>
-                                </li>
-                            ))}
-                        </ul>
+                        <div className="space-y-2">
+                            <h4 className="font-semibold text-md text-foreground/90">Your Daily Duties</h4>
+                            <p className="text-foreground/80 text-left text-sm">During your work shift, you would typically:</p>
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 pt-2">
+                                {dailyDuties.map((duty) => (
+                                    <li key={duty} className="flex items-start">
+                                        <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-1" />
+                                        <span className="text-foreground/90 text-sm">{duty}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
