@@ -162,11 +162,9 @@ export default function SocLevel1Page() {
                             <p className="text-foreground/80 text-left text-sm">
                               Below is an additional resource from Media Template on how to analyze email headers:
                             </p>
-                             <Button asChild variant="link" className="p-0 h-auto">
-                                <a href="https://web.archive.org/web/20221219232959/https://mediatemple.net/community/products/all/204643950/understanding-an-email-header" target="_blank" rel="noopener noreferrer">
-                                  Understanding an Email Header <ExternalLink className="ml-2 h-4 w-4" />
-                                </a>
-                              </Button>
+                            <a href="https://web.archive.org/web/20221219232959/https://mediatemple.net/community/products/all/204643950/understanding-an-email-header" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all text-sm">
+                                https://web.archive.org/web/20221219232959/https://mediatemple.net/community/products/all/204643950/understanding-an-email-header
+                            </a>
                           </div>
                         </div>
                       </div>
