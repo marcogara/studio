@@ -1,10 +1,10 @@
 
 import Image from "next/image";
-import { Header } from "@/components/header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, CheckCircle } from "lucide-react";
+import { ExternalLink, CheckCircle, TerminalSquare } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 
 const keyTopics = [
     "Log Analysis",
@@ -21,10 +21,25 @@ const dailyDuties = [
     "Constantly learn and discover new attacks and defenses"
 ];
 
+function SocHeader() {
+  return (
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-14 items-center">
+        <div className="mr-4 flex">
+          <Link href="/" className="mr-6 flex items-center space-x-2">
+            <TerminalSquare className="h-6 w-6 text-primary" />
+            <span className="font-bold font-headline">Portfolio</span>
+          </Link>
+        </div>
+      </div>
+    </header>
+  );
+}
+
 export default function SocLevel1Page() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <SocHeader />
       <main className="flex-1">
         <div className="container mx-auto px-4 py-12 md:py-16">
           <div className="max-w-4xl mx-auto">
