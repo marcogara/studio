@@ -57,7 +57,7 @@ export default function SocLevel1Page() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <Accordion type="multiple" className="w-full" defaultValue={["item-1"]}>
+                <Accordion type="multiple" className="w-full" defaultValue={["item-1", "item-3"]}>
                   <AccordionItem value="item-1">
                     <AccordionTrigger className="text-xl font-semibold font-headline">Path Overview</AccordionTrigger>
                     <AccordionContent>
@@ -84,7 +84,7 @@ export default function SocLevel1Page() {
                   <AccordionItem value="item-3">
                     <AccordionTrigger className="text-xl font-semibold font-headline">Junior Security Analyst Intro</AccordionTrigger>
                     <AccordionContent>
-                      <div className="space-y-4 py-4">
+                      <div className="space-y-6 py-4">
                         <p className="text-foreground/80 text-left">
                             As a Junior Security Analyst, also called a SOC Level 1 Analyst, you work in a 24/7 SOC team and mostly review the security alerts together with your colleagues. To do it efficiently, you will need practice and skills learned through this path.
                         </p>
@@ -99,6 +99,12 @@ export default function SocLevel1Page() {
                                     </li>
                                 ))}
                             </ul>
+                        </div>
+                        <div className="space-y-2">
+                          <h4 className="font-semibold text-md text-foreground/90">SOC and Your Team</h4>
+                          <p className="text-foreground/80 text-left text-sm">
+                            You are not alone in monitoring the alerts and securing the whole company. A lot of people support you with your job. SOC engineers are configuring the security tools, senior analysts are helping with complex attacks, and a manager is trying to keep everything under control. A Security Operations Center (SOC) is your big team that protects the company, each role in its own way. Now, let's meet your colleagues!
+                          </p>
                         </div>
                       </div>
                     </AccordionContent>
