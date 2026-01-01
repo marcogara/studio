@@ -167,6 +167,12 @@ export default function SocLevel1Page() {
                             </a>
                           </div>
                         </div>
+                         <div>
+                          <h4 className="font-semibold text-md text-foreground/90">BEC (Business Email Compromise) means.</h4>
+                          <p className="text-foreground/80 text-left text-sm mt-2">
+                            A BEC is when an adversary gains control of an internal employee's account and then uses the compromised email account to convince other internal employees to perform unauthorized or fraudulent actions.
+                          </p>
+                        </div>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
