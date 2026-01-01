@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, CheckCircle, TerminalSquare } from "lucide-react";
+import { ExternalLink, CheckCircle, TerminalSquare, ChevronRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import {
@@ -25,6 +25,14 @@ const dailyDuties = [
     "Participate in SOC brainstorms and workshops",
     "Cooperate with other teams to keep your company safe",
     "Constantly learn and discover new attacks and defenses"
+];
+
+const fiveWs = [
+    { name: "Who", description: "Which user logs in, runs the command, or downloads the file" },
+    { name: "What", description: "What exact action or event sequence was performed" },
+    { name: "When", description: "When exactly did the suspicious activity start and ended" },
+    { name: "Where", description: "Which device, IP, or website was involved in the alert" },
+    { name: "Why", description: "The most important W, the reasoning for your final verdict" },
 ];
 
 function SocHeader() {
@@ -113,8 +121,24 @@ export default function SocLevel1Page() {
                   <AccordionItem value="item-5">
                     <AccordionTrigger className="text-xl font-semibold font-headline">Soc team internals</AccordionTrigger>
                     <AccordionContent>
-                      <div className="py-4 text-left text-foreground/80">
-                        <p>Content for this section will be added soon.</p>
+                      <div className="py-4 text-left text-foreground/80 space-y-6">
+                        <div>
+                          <h4 className="font-semibold text-md text-foreground/90">Reporting Guide</h4>
+                          <p className="text-foreground/80 text-left text-sm mt-2">
+                            Imagine yourself as an L2 analyst, a DFIR team member, or an IT professional who needs to understand the alert. What would you want to see in the report? We recommend you follow the Five Ws approach and include at least these items in the report:
+                          </p>
+                          <ul className="space-y-4 mt-4">
+                            {fiveWs.map((item) => (
+                                <li key={item.name} className="flex items-start">
+                                    <ChevronRight className="h-5 w-5 text-primary mt-1 mr-2 shrink-0" />
+                                    <div>
+                                        <h5 className="font-semibold">{item.name}:</h5>
+                                        <p className="text-muted-foreground text-sm">{item.description}</p>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                        </div>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
