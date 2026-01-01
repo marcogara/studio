@@ -142,6 +142,20 @@ export default function SocLevel1Page() {
                       </div>
                     </AccordionContent>
                   </AccordionItem>
+                  
+                  <AccordionItem value="item-6">
+                    <AccordionTrigger className="text-xl font-semibold font-headline">Phishing Analysis</AccordionTrigger>
+                    <AccordionContent>
+                      <div className="py-4 text-left text-foreground/80 space-y-6">
+                        <div>
+                          <h4 className="font-semibold text-md text-foreground/90">Email Header</h4>
+                          <p className="text-foreground/80 text-left text-sm mt-2">
+                            Content for the email header subsection will go here.
+                          </p>
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
 
                   <AccordionItem value="item-4">
                     <AccordionTrigger className="text-xl font-semibold font-headline">Certificate</AccordionTrigger>
