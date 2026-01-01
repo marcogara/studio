@@ -110,6 +110,15 @@ export default function SocLevel1Page() {
                     </AccordionContent>
                   </AccordionItem>
 
+                  <AccordionItem value="item-5">
+                    <AccordionTrigger className="text-xl font-semibold font-headline">Soc team internals</AccordionTrigger>
+                    <AccordionContent>
+                      <div className="py-4 text-left text-foreground/80">
+                        <p>Content for this section will be added soon.</p>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
                   <AccordionItem value="item-4">
                     <AccordionTrigger className="text-xl font-semibold font-headline">Certificate</AccordionTrigger>
                     <AccordionContent>
