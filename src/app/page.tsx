@@ -262,7 +262,7 @@ export default function Home() {
                         <a href={project.repoLink} target="_blank" rel="noopener noreferrer"><Github className="mr-2 h-4 w-4" /> {project.repoLinkText || 'Repo'}</a>
                       </Button>
                        <Button asChild size="sm">
-                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer">{project.liveLinkText || 'Live Demo'} <ExternalLink className="ml-2 h-4 w-4" /></a>
+                        <a href={project.liveLink} target={project.liveLink.startsWith('/') ? '_self' : '_blank'} rel="noopener noreferrer">{project.liveLinkText || 'Live Demo'} <ExternalLink className="ml-2 h-4 w-4" /></a>
                       </Button>
                     </div>
                   </CardFooter>
