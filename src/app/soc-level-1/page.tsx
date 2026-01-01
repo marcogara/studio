@@ -150,8 +150,14 @@ export default function SocLevel1Page() {
                         <div>
                           <h4 className="font-semibold text-md text-foreground/90">Email Header</h4>
                           <p className="text-foreground/80 text-left text-sm mt-2">
-                            Content for the email header subsection will go here.
+                            Let's start with the following email header fields:
                           </p>
+                          <ul className="list-disc pl-5 mt-4 space-y-2 text-sm text-muted-foreground">
+                            <li><span className="font-semibold text-foreground/90">From</span> - the sender's email address</li>
+                            <li><span className="font-semibold text-foreground/90">Subject</span> - the email's subject line</li>
+                            <li><span className="font-semibold text-foreground/90">Date</span> - the date when the email was sent</li>
+                            <li><span className="font-semibold text-foreground/90">To</span> - the recipient's email address</li>
+                          </ul>
                         </div>
                       </div>
                     </AccordionContent>
