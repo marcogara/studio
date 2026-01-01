@@ -18,6 +18,17 @@ const placeholderImages: any = placeholderImagesData;
 // Project Data
 const projects = [
    {
+    title: "SOC Level 1 Learning Path",
+    description: "This comprehensive path covers the necessary technical and operational skills to become a qualified SOC analyst, from log analysis and threat triage to incident response.",
+    technologies: ["Cybersecurity", "SOC", "Log Analysis", "Incident Response"],
+    liveLink: "/soc-level-1",
+    liveLinkText: "View Path",
+    repoLink: "#",
+    repoUnavailable: true,
+    image: "https://picsum.photos/seed/soc/600/400",
+    imageHint: "cybersecurity shield",
+  },
+   {
     title: "Supplements Taxi",
     description: "A sleek and modern e-commerce prototype for a supplement delivery service, inspired by VitaminTaxi. Built with a focus on clean UI and a smooth user experience.",
     technologies: ["Next.js", "React", "Tailwind CSS"],
