@@ -14,6 +14,13 @@ const keyTopics = [
     "First Line of Defense Operations"
 ];
 
+const dailyDuties = [
+    "Monitor and investigate various security alerts",
+    "Participate in SOC brainstorms and workshops",
+    "Cooperate with other teams to keep your company safe",
+    "Constantly learn and discover new attacks and defenses"
+];
+
 export default function SocLevel1Page() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -45,6 +52,23 @@ export default function SocLevel1Page() {
                             <li key={topic} className="flex items-center">
                                 <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0" />
                                 <span className="text-foreground/90">{topic}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                <Separator />
+
+                <div>
+                    <h3 className="text-2xl font-semibold mb-4 text-center font-headline">Your Daily Duties</h3>
+                    <p className="text-foreground/80 text-center max-w-3xl mx-auto mb-6">
+                        As a Junior Security Analyst, also called a SOC Level 1 Analyst, you work in a 24/7 SOC team and mostly review the security alerts together with your colleagues. To do it efficiently, you will need practice and skills learned through this path. During your work shift, you would typically:
+                    </p>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 max-w-3xl mx-auto">
+                        {dailyDuties.map((duty) => (
+                            <li key={duty} className="flex items-start">
+                                <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-1" />
+                                <span className="text-foreground/90">{duty}</span>
                             </li>
                         ))}
                     </ul>
