@@ -177,6 +177,15 @@ export default function SocLevel1Page() {
                     </AccordionContent>
                   </AccordionItem>
 
+                  <AccordionItem value="item-7">
+                    <AccordionTrigger className="text-xl font-semibold font-headline">Tools</AccordionTrigger>
+                    <AccordionContent>
+                      <div className="py-4 text-left text-foreground/80 space-y-6">
+                        <p>Tools content will be added here.</p>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
                   <AccordionItem value="item-4">
                     <AccordionTrigger className="text-xl font-semibold font-headline">Certificate</AccordionTrigger>
                     <AccordionContent>
