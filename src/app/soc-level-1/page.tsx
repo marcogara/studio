@@ -65,7 +65,7 @@ export default function SocLevel1Page() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <Accordion type="multiple" className="w-full" defaultValue={["item-1", "item-3"]}>
+                <Accordion type="multiple" className="w-full">
                   <AccordionItem value="item-1">
                     <AccordionTrigger className="text-xl font-semibold font-headline">Path Overview</AccordionTrigger>
                     <AccordionContent>
