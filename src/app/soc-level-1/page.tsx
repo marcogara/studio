@@ -181,7 +181,14 @@ export default function SocLevel1Page() {
                     <AccordionTrigger className="text-xl font-semibold font-headline">Tools</AccordionTrigger>
                     <AccordionContent>
                       <div className="py-4 text-left text-foreground/80 space-y-6">
-                        <p>Tools content will be added here.</p>
+                         <div className="flex flex-col space-y-2">
+                            <h4 className="font-semibold text-md text-foreground/90">Useful Tools:</h4>
+                            <Button asChild variant="link" className="justify-start p-0 h-auto font-normal text-base">
+                                <a href="https://gchq.github.io/CyberChef/#recipe=Defang_URL(true,true,true,'Valid%20domains%20and%20full%20URLs')&input=aHR0cDovL3d3dy5zdXNwaWNpb3VzLnRobQ&ieol=CRLF&oeol=CRLF" target="_blank" rel="noopener noreferrer">
+                                    CyberChef <ExternalLink className="ml-2 h-4 w-4" />
+                                </a>
+                            </Button>
+                        </div>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
