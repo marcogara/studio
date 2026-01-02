@@ -173,6 +173,15 @@ export default function SocLevel1Page() {
                             A BEC is when an adversary gains control of an internal employee's account and then uses the compromised email account to convince other internal employees to perform unauthorized or fraudulent actions.
                           </p>
                         </div>
+                         <div className="space-y-2">
+                          <h4 className="font-semibold text-md text-foreground/90">Additional Resources:</h4>
+                          <ul className="list-disc pl-5 mt-2 space-y-2 text-sm">
+                              <li><a href="https://www.knowbe4.com/phishing" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">https://www.knowbe4.com/phishing</a></li>
+                              <li><a href="https://www.itgovernance.co.uk/blog/5-ways-to-detect-a-phishing-email" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">https://www.itgovernance.co.uk/blog/5-ways-to-detect-a-phishing-email</a></li>
+                              <li><a href="https://cheapsslsecurity.com/blog/10-phishing-email-examples-you-need-to-see/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">https://cheapsslsecurity.com/blog/10-phishing-email-examples-you-need-to-see/</a></li>
+                              <li><a href="https://phishingquiz.withgoogle.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">https://phishingquiz.withgoogle.com</a></li>
+                          </ul>
+                        </div>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
