@@ -139,6 +139,28 @@ export default function SocLevel1Page() {
                             ))}
                         </ul>
                         </div>
+                        <div>
+                          <h4 className="font-semibold text-md text-foreground/90">Alert Reporting</h4>
+                          <ul className="list-disc pl-5 mt-4 space-y-2 text-sm text-muted-foreground">
+                            <li>Provide a clear and detailed explanation of the reason why the activity is classified as TP or FP</li>
+                            <li>Clearly explain why the alert requires escalation and which remediation actions may be required</li>
+                            <li>Specify the entities associated with the activity detected by the alert:
+                                <ul className="list-[circle] pl-5 mt-2 space-y-1">
+                                    <li>Identify who or what was affected</li>
+                                    <li>Indicate where the activity occurred</li>
+                                    <li>Clarify when the activity took place</li>
+                                </ul>
+                            </li>
+                            <li>Provide all IOCs associated with the activity:
+                               <ul className="list-[circle] pl-5 mt-2 space-y-1">
+                                    <li>Network Indicators: IP addresses, Ports, Domains, URLs, etc</li>
+                                    <li>Host Indicators: File Names, File Paths, Hashes, Signatures, etc.</li>
+                                </ul>
+                            </li>
+                            <li>Specify which goals the threat actor attempted to achieve</li>
+                            <li>(Optional) Specify which MITRE techniques or tactics the activity can be related to</li>
+                          </ul>
+                        </div>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
