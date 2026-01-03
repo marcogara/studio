@@ -208,6 +208,24 @@ export default function SocLevel1Page() {
                     </AccordionContent>
                   </AccordionItem>
 
+                  <AccordionItem value="item-8">
+                    <AccordionTrigger className="text-xl font-semibold font-headline">Network Traffic Basic</AccordionTrigger>
+                    <AccordionContent>
+                      <div className="py-4 text-left text-foreground/80 space-y-6">
+                        <p>A corporate network typically has some predetermined network flows and sources. We can group the sources into two categories:</p>
+                        <ul className="list-disc pl-5 mt-4 space-y-2 text-sm text-muted-foreground">
+                            <li>Intermediary</li>
+                            <li>Endpoint</li>
+                        </ul>
+                        <p>The flows we can also group into two categories:</p>
+                        <ul className="list-disc pl-5 mt-4 space-y-2 text-sm text-muted-foreground">
+                            <li>North-South: Traffic that exits or enters the LAN and passes the firewall</li>
+                            <li>East-West: Traffic that stays within the LAN (including LAN that extends to the cloud).</li>
+                        </ul>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
                   <AccordionItem value="item-7">
                     <AccordionTrigger className="text-xl font-semibold font-headline">Tools</AccordionTrigger>
                     <AccordionContent>
