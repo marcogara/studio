@@ -230,6 +230,14 @@ export default function SocLevel1Page() {
                     <AccordionTrigger className="text-xl font-semibold font-headline">Tools</AccordionTrigger>
                     <AccordionContent>
                       <div className="py-4 text-left text-foreground/80 space-y-6">
+                         <div>
+                            <p className="text-sm text-muted-foreground">Now that we know how to do full packet captures lets have a look at the tools available to analyze these packets:</p>
+                             <ul className="list-disc pl-5 mt-4 space-y-2 text-sm text-muted-foreground">
+                                <li>Wireshark</li>
+                                <li>TCPdump</li>
+                                <li>IPS/IDS like Snort, Suricata and zeek</li>
+                            </ul>
+                         </div>
                          <div className="flex flex-col space-y-2">
                             <h4 className="font-semibold text-md text-foreground/90">Useful Tools:</h4>
                             <Button asChild variant="link" className="justify-start p-0 h-auto font-normal text-base">
