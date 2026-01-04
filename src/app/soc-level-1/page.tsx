@@ -237,6 +237,21 @@ export default function SocLevel1Page() {
                         </ul>
                         <h4 className="font-semibold text-md text-foreground/90 pt-4">External vs Internal Scanning</h4>
                         <h4 className="font-semibold text-md text-foreground/90 pt-4">Horizontal vs Vertical Scanning</h4>
+                        <div className="space-y-4">
+                            <h4 className="font-semibold text-md text-foreground/90 pt-4">The Mechanics of Scanning</h4>
+                            <div>
+                                <h5 className="font-semibold text-foreground/90">Ping Sweep</h5>
+                                <p className="text-sm text-muted-foreground mt-1">This is one of the most basic network scanning techniques. Ping sweeps are generally used to identify hosts present (and online) on a network. This scan is run by sending an Internet Control Message Protocol (ICMP) packet to the host. If the host is online, it will reply with an ICMP packet of its own. However, it is often blocked by security controls in some organisations nowadays, making it easier to defeat this type of scanning activity.</p>
+                            </div>
+                            <div>
+                                <h5 className="font-semibold text-foreground/90">TCP SYN Scans</h5>
+                                <p className="text-sm text-muted-foreground mt-1">A TCP connection is initiated by a three-way handshake, following the steps SYN, SYN-ACK, ACK to establish the connection. Network scanners can sometimes use this functionality of the TCP handshake to identify online hosts and their open ports. The scanner sends a SYN request to the recipient. If a SYN-ACK response is received, it means that the host is online and the port on which the SYN connection was sent is also open. This is a stealthy scan that often blends in with the rest of the network traffic and is harder to detect.</p>
+                            </div>
+                            <div>
+                                <h5 className="font-semibold text-foreground/90">UDP Scan</h5>
+                                <p className="text-sm text-muted-foreground mt-1">Another way to identify online hosts and open ports is by sending a (usually empty) UDP packet. If the port is closed, the host sends back an ICMP port unreachable reply. This signifies that the port is closed, but the host is online. In some cases, the scanner will not receive any response until a set timer is reached. If no response is received, the scanner will mark the port as open (but this is not a clear evidence of the port being open). In rare cases, the scanner might receive a UDP packet in response, which is evidence of the port being open. As we can infer, a UDP scan is unreliable and slow as it relies on waiting until it does not receive any response till a timeout is reached.</p>
+                            </div>
+                        </div>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
