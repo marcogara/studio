@@ -76,7 +76,7 @@ export default function SocLevel1Page() {
                   </AccordionItem>
 
                   <AccordionItem value="item-2">
-                    <AccordionTrigger className="text-xl font-semibold font-headline">Key Topics Covered</AccordionTrigger>
+                    <AccordionTrigger className="text-xl font-semibold fontheadline">Key Topics Covered</AccordionTrigger>
                     <AccordionContent>
                       <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 py-4">
                           {keyTopics.map((topic) => (
@@ -222,6 +222,15 @@ export default function SocLevel1Page() {
                             <li>North-South: Traffic that exits or enters the LAN and passes the firewall</li>
                             <li>East-West: Traffic that stays within the LAN (including LAN that extends to the cloud).</li>
                         </ul>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                   <AccordionItem value="item-9">
+                    <AccordionTrigger className="text-xl font-semibold font-headline">Network Discovery Basic</AccordionTrigger>
+                    <AccordionContent>
+                      <div className="py-4 text-left text-foreground/80 space-y-6">
+                        <p>Content coming soon...</p>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
