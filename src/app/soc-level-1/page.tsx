@@ -230,7 +230,11 @@ export default function SocLevel1Page() {
                     <AccordionTrigger className="text-xl font-semibold font-headline">Network Discovery Basic</AccordionTrigger>
                     <AccordionContent>
                       <div className="py-4 text-left text-foreground/80 space-y-6">
-                        <p>Content coming soon...</p>
+                        <ul className="list-disc pl-5 mt-4 space-y-2 text-sm text-muted-foreground">
+                            <li>What assets can be accessed by the attacker?</li>
+                            <li>What are the IP addresses, ports, OS, and services running on these assets?</li>
+                            <li>What versions of services are running? Does any service have a vulnerability that can be exploited?</li>
+                        </ul>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
