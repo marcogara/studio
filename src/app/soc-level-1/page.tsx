@@ -236,6 +236,7 @@ export default function SocLevel1Page() {
                             <li>What versions of services are running? Does any service have a vulnerability that can be exploited?</li>
                         </ul>
                         <h4 className="font-semibold text-md text-foreground/90 pt-4">External vs Internal Scanning</h4>
+                        <h4 className="font-semibold text-md text-foreground/90 pt-4">Horizontal vs Vertical Scanning</h4>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
