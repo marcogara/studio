@@ -367,7 +367,7 @@ export default function SocLevel1Page() {
                                 </div>
                             </div>
                           </div>
-                          <div className="pt-4">
+                           <div className="pt-4">
                             <h4 className="font-semibold text-md text-foreground/90">Sysmon: Process Monitoring</h4>
                             <p className="text-sm text-muted-foreground mt-2">Even if you know who is breached, you often don't know how. That's where process monitoring comes in handy, and there are two ways to enable it on Windows:</p>
                              <div className="mt-4 border rounded-lg">
@@ -392,6 +392,38 @@ export default function SocLevel1Page() {
                                 <p className="text-sm text-muted-foreground mt-2">Sysmon is a free tool from the Microsoft Sysinternals suite that became a de facto standard for advanced monitoring in addition to the default system logs. For this task, we'll jump right into analyzing Sysmon logs but you can learn more about this great tool in another <span className="font-semibold">TryHackMe room</span>.</p>
                                 <p className="text-sm text-muted-foreground mt-2">So, if I were to choose between enabling the basic, noisy 4688 event ID or spending some time installing Sysmon to receive more powerful and flexible logs, I would proceed with Sysmon, and you are encouraged to do the same! Once installed, Sysmon logs are found in Event Viewer under Applications & Services -> Microsoft -> Windows -> Sysmon -> Operational.</p>
                              </div>
+                             <div className="pt-6">
+                               <Accordion type="single" collapsible className="w-full">
+                                   <AccordionItem value="playbook-process-launch">
+                                       <AccordionTrigger className="text-md font-semibold font-headline">Analyse Process Launch (Expand Me)</AccordionTrigger>
+                                       <AccordionContent>
+                                           <ol className="list-decimal pl-6 mt-4 space-y-2 text-sm text-muted-foreground">
+                                               <li>Open Sysmon logs and filter for event ID 1</li>
+                                               <li>Review the fields from the process and binary info groups. The red flags are:
+                                                   <ul className="list-[circle] pl-5 mt-2 space-y-1">
+                                                       <li>Image is in an uncommon directory like C:\Temp or C:\Users\Public</li>
+                                                       <li>Process is suspiciously named like aa.exe or jqyvpqldou.exe</li>
+                                                       <li>Process hash (MD5 or SHA256) matches as malware on VirusTotal</li>
+                                                   </ul>
+                                               </li>
+                                               <li>Review the fields from the parent process group. The red flags are:
+                                                   <ul className="list-[circle] pl-5 mt-2 space-y-1">
+                                                       <li>Parent matches red flags from step 2 (suspicious name, path, or hash)</li>
+                                                       <li>Parent is not expected (e.g. Notepad launching some CMD commands)</li>
+                                                   </ul>
+                                               </li>
+                                               <li>If still in doubt, go up the process tree until you are confident in your verdict:
+                                                   <ul className="list-[circle] pl-5 mt-2 space-y-1">
+                                                       <li>Find the preceding event where ProcessId equals ParentProcessId in your event</li>
+                                                       <li>Analyze it by following steps 2 and 3 (suspicious parent, name, path, or hash)</li>
+                                                   </ul>
+                                               </li>
+                                               <li>Finally, trace the attack chain by filtering all Security and Sysmon events with the same Logon ID</li>
+                                           </ol>
+                                       </AccordionContent>
+                                   </AccordionItem>
+                               </Accordion>
+                            </div>
                           </div>
                            <div className="pt-6">
                             <Accordion type="single" collapsible className="w-full">
