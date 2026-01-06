@@ -265,8 +265,10 @@ export default function SocLevel1Page() {
                               There are <a href="https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">over 500</a> event IDs just for the Security logs and many thousands of various event IDs in total! Still, not all events are logged by default and not all events are properly documented, so in this room we will explore the most helpful logs for daily SOC routines.
                              </p>
                           </div>
-                          <p>Security logs: Successful Logon (4624) and Failed Logon (4625).</p>
-                           <div className="border rounded-lg">
+                          <div>
+                            <h4 className="font-semibold text-md text-foreground/90">Security Log: Authentication</h4>
+                            <p className="text-sm text-muted-foreground mt-2">Security logs: Successful Logon (4624) and Failed Logon (4625).</p>
+                             <div className="mt-4 border rounded-lg">
                                 <div className="grid grid-cols-4 font-semibold border-b">
                                     <div className="p-2 border-r">Event ID</div>
                                     <div className="p-2 border-r col-span-1">Purpose</div>
@@ -274,13 +276,13 @@ export default function SocLevel1Page() {
                                     <div className="p-2">Limitations</div>
                                 </div>
                                 <div className="grid grid-cols-4 border-b">
-                                    <div className="p-2 border-r text-sm text-muted-foreground">4624 (Successful Logon)</div>
+                                    <div className="p-2 border-r text-sm text-muted-foreground">4624<br />(Successful Logon)</div>
                                     <div className="p-2 border-r text-sm text-muted-foreground">Detect suspicious RDP/network logins and identify the attack starting point</div>
                                     <div className="p-2 border-r text-sm text-muted-foreground">Logged on the target machine, the one you are trying to access</div>
                                     <div className="p-2 text-sm text-muted-foreground">Noisy. You will see hundreds of logon events per minute on loaded servers</div>
                                 </div>
                                 <div className="grid grid-cols-4">
-                                    <div className="p-2 border-r text-sm text-muted-foreground">4625 (Failed Logon)</div>
+                                    <div className="p-2 border-r text-sm text-muted-foreground">4625<br />(Failed Logon)</div>
                                     <div className="p-2 border-r text-sm text-muted-foreground">Detect brute force, password spraying, or vulnerability scanning</div>
                                     <div className="p-2 border-r text-sm text-muted-foreground">Logged on the target machine, the one you are trying to access</div>
                                     <div className="p-2 text-sm text-muted-foreground">Inconsistent. The logs have lots of caveats that may trick you into the wrong understanding of the event</div>
@@ -333,8 +335,10 @@ export default function SocLevel1Page() {
                                 </AccordionItem>
                             </Accordion>
                            </div>
-                          <div className="pt-4">
-                            <p className="text-sm text-muted-foreground">With some knowledge of authentication and user management events, it is trivial to find out the whole history of any user account. Below is a breakdown of the common event IDs you can use:</p>
+                          </div>
+                           <div className="pt-4">
+                            <h4 className="font-semibold text-md text-foreground/90">Security Log: User Management</h4>
+                            <p className="text-sm text-muted-foreground mt-2">With some knowledge of authentication and user management events, it is trivial to find out the whole history of any user account. Below is a breakdown of the common event IDs you can use:</p>
                              <div className="mt-4 border rounded-lg">
                                 <div className="grid grid-cols-3 font-semibold border-b">
                                     <div className="p-2 border-r">Event ID</div>
