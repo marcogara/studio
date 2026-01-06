@@ -314,6 +314,33 @@ export default function SocLevel1Page() {
                                 </div>
                             </div>
                           </div>
+                           <div className="pt-6">
+                            <Accordion type="single" collapsible className="w-full">
+                                <AccordionItem value="playbook-1">
+                                    <AccordionTrigger className="text-md font-semibold font-headline">Hunt for Backdoored Users (Expand Me)</AccordionTrigger>
+                                    <AccordionContent>
+                                        <ol className="list-decimal pl-6 mt-4 space-y-2 text-sm text-muted-foreground">
+                                            <li>Open Security logs and filter for 4720 / 4732 event IDs</li>
+                                            <li>Manually review every event; your red flags are:
+                                                <ul className="list-[circle] pl-5 mt-2 space-y-1">
+                                                    <li>No one from your IT department can confirm the action</li>
+                                                    <li>Changes were made during non-working hours or on weekends</li>
+                                                    <li>The subject user's name is unknown or unexpected to you (e.g. "adm.old.2008" creating new Windows users)</li>
+                                                    <li>The target user's name does not follow a usual naming pattern (e.g. "backup" instead of "thm_svc_backup")</li>
+                                                </ul>
+                                            </li>
+                                            <li>If you confirmed that the action was malicious, find out the login details:
+                                                <ul className="list-[circle] pl-5 mt-2 space-y-1">
+                                                    <li>Copy the Logon ID field from your 4720 / 4732 event</li>
+                                                    <li>Find the corresponding login event with the same Logon ID</li>
+                                                    <li>Refer to the workbooks from the previous task for further analysis</li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </Accordion>
+                           </div>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
