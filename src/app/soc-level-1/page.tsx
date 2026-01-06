@@ -266,24 +266,26 @@ export default function SocLevel1Page() {
                              </p>
                           </div>
                           <p>Security logs: Successful Logon (4624) and Failed Logon (4625).</p>
-                          <div className="space-y-4">
-                            <div>
-                              <h4 className="font-semibold text-foreground/90">Event ID 4624 (Successful Logon)</h4>
-                              <ul className="list-disc pl-5 mt-2 space-y-1 text-sm text-muted-foreground">
-                                <li><strong>Purpose:</strong> Detect suspicious RDP/network logins and identify the attack starting point</li>
-                                <li><strong>Logging:</strong> Logged on the target machine, the one you are trying to access</li>
-                                <li><strong>Limitations:</strong> Noisy. You will see hundreds of logon events per minute on loaded servers</li>
-                              </ul>
+                           <div className="border rounded-lg">
+                                <div className="grid grid-cols-4 font-semibold border-b">
+                                    <div className="p-2 border-r">Event ID</div>
+                                    <div className="p-2 border-r col-span-1">Purpose</div>
+                                    <div className="p-2 border-r">Logging</div>
+                                    <div className="p-2">Limitations</div>
+                                </div>
+                                <div className="grid grid-cols-4 border-b">
+                                    <div className="p-2 border-r text-sm text-muted-foreground">4624 (Successful Logon)</div>
+                                    <div className="p-2 border-r text-sm text-muted-foreground">Detect suspicious RDP/network logins and identify the attack starting point</div>
+                                    <div className="p-2 border-r text-sm text-muted-foreground">Logged on the target machine, the one you are trying to access</div>
+                                    <div className="p-2 text-sm text-muted-foreground">Noisy. You will see hundreds of logon events per minute on loaded servers</div>
+                                </div>
+                                <div className="grid grid-cols-4">
+                                    <div className="p-2 border-r text-sm text-muted-foreground">4625 (Failed Logon)</div>
+                                    <div className="p-2 border-r text-sm text-muted-foreground">Detect brute force, password spraying, or vulnerability scanning</div>
+                                    <div className="p-2 border-r text-sm text-muted-foreground">Logged on the target machine, the one you are trying to access</div>
+                                    <div className="p-2 text-sm text-muted-foreground">Inconsistent. The logs have lots of caveats that may trick you into the wrong understanding of the event</div>
+                                </div>
                             </div>
-                            <div>
-                              <h4 className="font-semibold text-foreground/90">Event ID 4625 (Failed Logon)</h4>
-                              <ul className="list-disc pl-5 mt-2 space-y-1 text-sm text-muted-foreground">
-                                <li><strong>Purpose:</strong> Detect brute force, password spraying, or vulnerability scanning</li>
-                                <li><strong>Logging:</strong> Logged on the target machine, the one you are trying to access</li>
-                                <li><strong>Limitations:</strong> Inconsistent. The logs have lots of caveats that may trick you into the wrong understanding of the event</li>
-                              </ul>
-                            </div>
-                          </div>
                            <div className="pt-2 space-y-2">
                              <Accordion type="single" collapsible className="w-full">
                                 <AccordionItem value="playbook-rdp-brute">
