@@ -284,6 +284,53 @@ export default function SocLevel1Page() {
                               </ul>
                             </div>
                           </div>
+                           <div className="pt-2 space-y-2">
+                             <Accordion type="single" collapsible className="w-full">
+                                <AccordionItem value="playbook-rdp-brute">
+                                    <AccordionTrigger className="text-md font-semibold font-headline">Detect RDP Brute Force (Expand Me)</AccordionTrigger>
+                                    <AccordionContent>
+                                        <ol className="list-decimal pl-6 mt-4 space-y-2 text-sm text-muted-foreground">
+                                            <li>Open Security logs and filter for 4625 event ID (Failed login attempts)</li>
+                                            <li>Look for events with Logon Type 3 and 10 (Network and RDP logins)
+                                                <ul className="list-[circle] pl-5 mt-2 space-y-1">
+                                                    <li>For most modern systems, the logon type will be 3 (since NLA is enabled by default)</li>
+                                                    <li>For older or misconfigured systems, the logon type will be 10 (since NLA is not used)</li>
+                                                </ul>
+                                            </li>
+                                            <li>Every event is now worth your attention, but the main red flags are:
+                                                <ul className="list-[circle] pl-5 mt-2 space-y-1">
+                                                    <li>Many attempted users like admin, helpdesk,  and cctv (Indicates password spraying)</li>
+                                                    <li>Many login failures on a single account, usually Administrator (Indicates brute force)</li>
+                                                    <li>Workstation Name does not match a corporate pattern (e.g. kali instead of THM-PC-06)</li>
+                                                    <li>Source IP is not expected (e.g. your printer trying to connect to your Windows Server)</li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </AccordionContent>
+                                </AccordionItem>
+                                 <AccordionItem value="playbook-rdp-logons">
+                                    <AccordionTrigger className="text-md font-semibold font-headline">Analyse RDP Logons (Expand Me)</AccordionTrigger>
+                                    <AccordionContent>
+                                        <ol className="list-decimal pl-6 mt-4 space-y-2 text-sm text-muted-foreground">
+                                            <li>Open Security logs and filter for 4624 event ID (Successful logins)</li>
+                                            <li>Look for events with Logon Type 10 (RDP logins)
+                                                <ul className="list-[circle] pl-5 mt-2 space-y-1">
+                                                    <li>If NLA is enabled, every RDP logon event is preceded by another 4624 with logon type 3</li>
+                                                    <li>To get a real Workstation Name, you need to check the preceding logon type 3 event</li>
+                                                </ul>
+                                            </li>
+                                            <li>Your red flags are either a preceding brute force or a suspicious source IP / hostname</li>
+                                            <li>If you assume that the login was indeed malicious, find out what happened next:
+                                                 <ul className="list-[circle] pl-5 mt-2 space-y-1">
+                                                    <li>Windows assigns a Logon ID to every successful login (e.g. 0x5D6AC)</li>
+                                                    <li>Logon ID is a unique session identifier. Save it for future analysis!</li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </Accordion>
+                           </div>
                           <div className="pt-4">
                             <p className="text-sm text-muted-foreground">With some knowledge of authentication and user management events, it is trivial to find out the whole history of any user account. Below is a breakdown of the common event IDs you can use:</p>
                              <div className="mt-4 border rounded-lg">
