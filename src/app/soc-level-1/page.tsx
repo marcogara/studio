@@ -255,6 +255,32 @@ export default function SocLevel1Page() {
                       </div>
                     </AccordionContent>
                   </AccordionItem>
+                  <AccordionItem value="item-10">
+                    <AccordionTrigger className="text-xl font-semibold font-headline">Windows Logging for SOC</AccordionTrigger>
+                    <AccordionContent>
+                      <div className="py-4 text-left text-foreground/80 space-y-6">
+                          <p>Security logs: Successful Logon (4624) and Failed Logon (4625).</p>
+                          <div className="space-y-4">
+                            <div>
+                              <h4 className="font-semibold text-foreground/90">Event ID 4624 (Successful Logon)</h4>
+                              <ul className="list-disc pl-5 mt-2 space-y-1 text-sm text-muted-foreground">
+                                <li><strong>Purpose:</strong> Detect suspicious RDP/network logins and identify the attack starting point</li>
+                                <li><strong>Logging:</strong> Logged on the target machine, the one you are trying to access</li>
+                                <li><strong>Limitations:</strong> Noisy. You will see hundreds of logon events per minute on loaded servers</li>
+                              </ul>
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-foreground/90">Event ID 4625 (Failed Logon)</h4>
+                              <ul className="list-disc pl-5 mt-2 space-y-1 text-sm text-muted-foreground">
+                                <li><strong>Purpose:</strong> Detect brute force, password spraying, or vulnerability scanning</li>
+                                <li><strong>Logging:</strong> Logged on the target machine, the one you are trying to access</li>
+                                <li><strong>Limitations:</strong> Inconsistent. The logs have lots of caveats that may trick you into the wrong understanding of the event</li>
+                              </ul>
+                            </div>
+                          </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
 
                   <AccordionItem value="item-7">
                     <AccordionTrigger className="text-xl font-semibold font-headline">Tools</AccordionTrigger>
