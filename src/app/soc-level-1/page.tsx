@@ -262,7 +262,7 @@ export default function SocLevel1Page() {
                           <div>
                             <h4 className="font-semibold text-foreground/90">What Is Logged</h4>
                              <p className="text-sm text-muted-foreground mt-1">
-                              There are over 500 event IDs just for the Security logs and many thousands of various event IDs in total! Still, not all events are logged by default and not all events are properly documented, so in this room we will explore the most helpful logs for daily SOC routines.
+                              There are <a href="https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">over 500</a> event IDs just for the Security logs and many thousands of various event IDs in total! Still, not all events are logged by default and not all events are properly documented, so in this room we will explore the most helpful logs for daily SOC routines.
                              </p>
                           </div>
                           <p>Security logs: Successful Logon (4624) and Failed Logon (4625).</p>
