@@ -259,6 +259,12 @@ export default function SocLevel1Page() {
                     <AccordionTrigger className="text-xl font-semibold font-headline">Windows Logging for SOC</AccordionTrigger>
                     <AccordionContent>
                       <div className="py-4 text-left text-foreground/80 space-y-6">
+                          <div>
+                            <h4 className="font-semibold text-foreground/90">What Is Logged</h4>
+                             <p className="text-sm text-muted-foreground mt-1">
+                              There are over 500 event IDs just for the Security logs and many thousands of various event IDs in total! Still, not all events are logged by default and not all events are properly documented, so in this room we will explore the most helpful logs for daily SOC routines.
+                             </p>
+                          </div>
                           <p>Security logs: Successful Logon (4624) and Failed Logon (4625).</p>
                           <div className="space-y-4">
                             <div>
