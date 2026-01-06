@@ -284,6 +284,36 @@ export default function SocLevel1Page() {
                               </ul>
                             </div>
                           </div>
+                          <div className="pt-4">
+                            <p className="text-sm text-muted-foreground">With some knowledge of authentication and user management events, it is trivial to find out the whole history of any user account. Below is a breakdown of the common event IDs you can use:</p>
+                             <div className="mt-4 border rounded-lg">
+                                <div className="grid grid-cols-3 font-semibold border-b">
+                                    <div className="p-2 border-r">Event ID</div>
+                                    <div className="p-2 border-r">Description</div>
+                                    <div className="p-2">Malicious Usage</div>
+                                </div>
+                                <div className="grid grid-cols-3 border-b">
+                                    <div className="p-2 border-r text-sm text-muted-foreground">4720 / 4722 / 4738</div>
+                                    <div className="p-2 border-r text-sm text-muted-foreground">A user account was created / enabled / changed</div>
+                                    <div className="p-2 text-sm text-muted-foreground">Attackers might create a backdoor account or even enable an old one to avoid detection</div>
+                                </div>
+                                <div className="grid grid-cols-3 border-b">
+                                    <div className="p-2 border-r text-sm text-muted-foreground">4725 / 4726</div>
+                                    <div className="p-2 border-r text-sm text-muted-foreground">A user account was disabled / deleted</div>
+                                    <div className="p-2 text-sm text-muted-foreground">In some advanced cases, threat actors may disable privileged SOC accounts to slow down their actions</div>
+                                </div>
+                                <div className="grid grid-cols-3 border-b">
+                                    <div className="p-2 border-r text-sm text-muted-foreground">4723 / 4724</div>
+                                    <div className="p-2 border-r text-sm text-muted-foreground">A user changed their password / User's password was reset</div>
+                                    <div className="p-2 text-sm text-muted-foreground">Given enough permissions, threat actors might reset the password and then access the required user</div>
+                                </div>
+                                <div className="grid grid-cols-3">
+                                    <div className="p-2 border-r text-sm text-muted-foreground">4732 / 4733</div>
+                                    <div className="p-2 border-r text-sm text-muted-foreground">A user was added to / removed from a security group</div>
+                                    <div className="p-2 text-sm text-muted-foreground">Attackers often add their backdoor accounts to privileged groups like "Administrators"</div>
+                                </div>
+                            </div>
+                          </div>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
