@@ -367,6 +367,32 @@ export default function SocLevel1Page() {
                                 </div>
                             </div>
                           </div>
+                          <div className="pt-4">
+                            <h4 className="font-semibold text-md text-foreground/90">Sysmon: Process Monitoring</h4>
+                            <p className="text-sm text-muted-foreground mt-2">Even if you know who is breached, you often don't know how. That's where process monitoring comes in handy, and there are two ways to enable it on Windows:</p>
+                             <div className="mt-4 border rounded-lg">
+                                <div className="grid grid-cols-3 font-semibold border-b">
+                                    <div className="p-2 border-r">Event Code</div>
+                                    <div className="p-2 border-r">Purpose</div>
+                                    <div className="p-2">Limitations</div>
+                                </div>
+                                <div className="grid grid-cols-3 border-b">
+                                    <div className="p-2 border-r text-sm text-muted-foreground">4688<br/>(Security Log: Process Creation)</div>
+                                    <div className="p-2 border-r text-sm text-muted-foreground">Log an event every time a new process is launched, including its command line and parent process details</div>
+                                    <div className="p-2 text-sm text-muted-foreground">Disabled by default, you need to enable it by following the <span className="font-semibold">official documentation</span></div>
+                                </div>
+                                <div className="grid grid-cols-3">
+                                    <div className="p-2 border-r text-sm text-muted-foreground">1<br/>(Sysmon: Process Creation)</div>
+                                    <div className="p-2 border-r text-sm text-muted-foreground">Replace 4688 event code and provide more advanced fields like process hash and its signature</div>
+                                    <div className="p-2 text-sm text-muted-foreground">Sysmon is an external tool not installed by default. Check out the <span className="font-semibold">Sysmon official page</span></div>
+                                </div>
+                            </div>
+                             <div className="pt-4">
+                                <h5 className="font-semibold text-foreground/90">Sysmon vs Security Log</h5>
+                                <p className="text-sm text-muted-foreground mt-2">Sysmon is a free tool from the Microsoft Sysinternals suite that became a de facto standard for advanced monitoring in addition to the default system logs. For this task, we'll jump right into analyzing Sysmon logs but you can learn more about this great tool in another <span className="font-semibold">TryHackMe room</span>.</p>
+                                <p className="text-sm text-muted-foreground mt-2">So, if I were to choose between enabling the basic, noisy 4688 event ID or spending some time installing Sysmon to receive more powerful and flexible logs, I would proceed with Sysmon, and you are encouraged to do the same! Once installed, Sysmon logs are found in Event Viewer under Applications & Services -> Microsoft -> Windows -> Sysmon -> Operational.</p>
+                             </div>
+                          </div>
                            <div className="pt-6">
                             <Accordion type="single" collapsible className="w-full">
                                 <AccordionItem value="playbook-1">
