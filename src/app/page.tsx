@@ -2,6 +2,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Github, Linkedin, Mail, ArrowRight, Code, ExternalLink } from 'lucide-react';
 import { Header } from "@/components/header";
 import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter } from "@/components/ui/card";
@@ -11,115 +12,11 @@ import { ContactForm } from "@/components/contact-form";
 import { Separator } from "@/components/ui/separator";
 import { Quote } from "@/components/quote";
 import { useState, useEffect } from "react";
-import placeholderImagesData from "@/lib/placeholder-images.json";
+import { projects as allProjects } from "@/lib/projects-data";
 
-const placeholderImages: any = placeholderImagesData;
+const featuredProjectTitles = ["IHK Project", "Supplements Taxi", "SOC Level 1 Learning Path"];
+const featuredProjects = featuredProjectTitles.map(title => allProjects.find(p => p.title === title)).filter(Boolean) as any[];
 
-// Project Data
-const projects = [
-   {
-    title: "SOC Level 1 Learning Path",
-    description: "This comprehensive path covers the necessary technical and operational skills to become a qualified SOC analyst, from log analysis and threat triage to incident response.",
-    technologies: ["Cybersecurity", "SOC", "Log Analysis", "Incident Response"],
-    liveLink: "/soc-level-1",
-    liveLinkText: "View Path",
-    repoLink: "#",
-    repoUnavailable: true,
-    image: "https://picsum.photos/seed/soc/600/400",
-    imageHint: "cybersecurity shield",
-  },
-   {
-    title: "Supplements Taxi",
-    description: "A sleek and modern e-commerce prototype for a supplement delivery service, inspired by VitaminTaxi. Built with a focus on clean UI and a smooth user experience.",
-    technologies: ["Next.js", "React", "Tailwind CSS"],
-    liveLink: "/supplements-taxi",
-    liveLinkText: "Demo",
-    repoLink: "#",
-    repoUnavailable: true,
-    image: placeholderImages.supplementsHero.src,
-    imageHint: placeholderImages.supplementsHero.hint,
-  },
-  {
-    title: "MetroRail v.02",
-    description: "The next iteration of the MetroRail project, featuring an improved UI, real-time data integration capabilities, and enhanced performance for a smoother user experience. This version can differentiate between trams and is being developed for full timetable synchronization.",
-    technologies: ["JavaScript", "HTML", "CSS"],
-    liveLink: "https://marcogara.github.io/pages/2025/metro-m2-V02/index.html",
-    liveLinkText: "Demo",
-    repoLink: "#",
-    repoUnavailable: true,
-    image: "https://picsum.photos/seed/metrorail2/600/400",
-    imageHint: "modern train interface",
-  },
-  {
-    title: "Pharmaceutical Inventory Management System",
-    description: "A simple starter project to explore the Spring Bean lifecycle and use Thymeleaf templates for dynamic HTML rendering. \nThis project is meant to showcase how Spring manages beans and how to serve dynamic content in a clean, extendable way.",
-    technologies: ["Java", "Spring Beans", "HTML", "CSS", "JSON"],
-    liveLink: "/pharma-inventory",
-    liveLinkText: "Demo",
-    repoLink: "https://github.com/marcogara/pharmaceutical-inventory-management-system",
-    image: "/Meds.png",
-    imageHint: "finance banking",
-  },
-  {
-    title: "Smart Interest App",
-    description: "A banking application for managing interest rates, built with a robust Java backend and a classic web frontend. \nThis UI is for demonstration only. The Spring Boot backend is not live.\nCheck out the repo for the backend.",
-    technologies: ["Java", "PostgreSQL", "HTML", "CSS", "JavaScript"],
-    liveLink: "/smart-interest-app/index.html",
-    repoLink: "https://github.com/marcogara/interest-optimisation-account",
-    image: "/MVP_saving_app.png",
-    imageHint: "finance banking",
-  },
-  {
-    title: "Java Adventures for Kids",
-    description: "A fun, interactive book designed to teach children the fundamentals of Java programming with easy-to-understand examples and copy-paste code snippets.",
-    technologies: ["Java", "Education"],
-    liveLink: "https://www.amazon.com/CODE-KIDS-JAVA-Learn-doing-ebook/dp/B0F4MK7YKF/ref=tmm_kin_swatch_0",
-    liveLinkText: "Buy on Amazon",
-    repoLink: "#",
-    image: "/codeForKidsJAVA.png",
-    imageHint: "book code kids",
-  },
-  {
-    title: "Self-driving car JavaScript project",
-    description: "Self-driving car JavaScript project. The car is driving autonomously, and it's driven by a neural network coded from scratch in JS.",
-    technologies: ["JavaScript", "Neural Network"],
-    liveLink: "/carProject/index.html",
-    repoLink: "#",
-    image: "/carAI.png",
-    imageHint: "neural network car",
-  },
-  {
-    title: "IHK Project",
-    description: "Developed a feature for the SyABO web app, a system used by public transport companies to manage subscriber and student data. This project involved creating a tool to define and manage data exchange conventions with various data suppliers via CSV file interfaces.",
-    technologies: ["Java", "PostgreSQL", "JSP", "JSF"],
-    liveLink: "/IHK/presi.pdf",
-    liveLinkText: "Presentation",
-    repoLink: "/IHK/doku.pdf",
-    repoLinkText: "Docs",
-    image: "/IHK/320px-IHK_Berlin_Logo.svg.png",
-    imageHint: "education certificate",
-    isLogo: true,
-  },
-  {
-    title: "CS50's Introduction to Programming with Python",
-    description: "Completed Harvard's renowned introductory course on Python, covering core concepts from functions and data structures to object-oriented programming. This project showcases the final project and certificate.",
-    technologies: ["Python", "Education"],
-    liveLink: "/cs50",
-    liveLinkText: "View Project",
-    repoLink: "https://github.com/marcogara/Phyton",
-    image: "/cs50/CS50P.png",
-    imageHint: "python code certificate",
-  },
-  {
-    title: "AuthCore",
-    description: "A reusable authorization module built with Spring Boot and Java, designed to be integrated into other projects for robust security.",
-    technologies: ["Java", "Spring Boot", "Security", "JPA"],
-    liveLink: "/authcore",
-    repoLink: "https://github.com/marcogara/authcore",
-    video: "/authcore/login1.mp4",
-    imageHint: "security lock animation",
-  },
-];
 
 // Skills Data
 const languagesAndFrameworks = [
@@ -222,7 +119,7 @@ export default function Home() {
           <section id="projects" className="fade-in" style={{ animationDelay: '0.4s' }}>
             <h2 className="text-3xl font-bold text-center mb-12 font-headline">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project: any, index) => (
+              {featuredProjects.map((project: any, index) => (
                 <Card key={index} className="flex flex-col overflow-hidden hover:border-primary/50 transition-colors duration-300 rounded-3xl">
                   <CardHeader className="p-0">
                     <div className="w-full h-48 relative bg-card">
@@ -268,6 +165,13 @@ export default function Home() {
                   </CardFooter>
                 </Card>
               ))}
+            </div>
+            <div className="text-center mt-12">
+              <Button asChild size="lg" variant="outline">
+                <Link href="/projects">
+                  See More Projects <ArrowRight className="ml-2" />
+                </Link>
+              </Button>
             </div>
           </section>
 
