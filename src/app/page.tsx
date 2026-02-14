@@ -53,7 +53,7 @@ export default function Home() {
             <h1 className="text-4xl md:text-5xl font-bold font-headline mb-2">It's me, Marco!</h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-6">Full-Stack Developer & Tech Enthusiast</p>
             <p className="max-w-3xl mx-auto text-foreground/80 mb-8">
-              From crafting secure Java backends and exploring AI with JavaScript to developing educational content, I thrive on turning diverse and complex challenges into practical, user-focused applications.
+              As a Junior Developer working on ERP systems, I contribute to building and maintaining reliable backend solutions that support real-world business operations. I’m continuously learning and working with the Progress OpenEdge (ABL) tech stack while strengthening my understanding of scalable architectures and clean code practices. I enjoy turning complex business requirements into structured, maintainable solutions that create measurable impact.
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-4">
               <Button asChild variant="outline">
