@@ -53,7 +53,7 @@ export default function Home() {
             <h1 className="text-4xl md:text-5xl font-bold font-headline mb-2">It's me, Marco!</h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-6">Full-Stack Developer & Tech Enthusiast</p>
             <p className="max-w-3xl mx-auto text-foreground/80 mb-8">
-              As a Junior Developer working on ERP systems, I contribute to building and maintaining reliable backend solutions that support real-world business operations. I’m continuously learning and working with the Progress OpenEdge (ABL) tech stack while strengthening my understanding of scalable architectures and clean code practices. I enjoy turning complex business requirements into structured, maintainable solutions that create measurable impact.
+              A Junior Developer building reliable backend solutions for ERP systems. I enjoy turning complex business requirements into clean, structured code and am always eager to learn and apply new technologies.
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-4">
               <Button asChild variant="outline">
@@ -79,13 +79,13 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-8 font-headline">About Me</h2>
             <div className="max-w-3xl mx-auto text-foreground/80 space-y-4 text-left">
               <p>
-                Welcome to my project portfolio website! I'm Marco, a passionate and certified developer (IHK), exploring the world of coding and innovation.
+                Welcome to my project portfolio website! I'm Marco, a passionate and certified developer (IHK).
               </p>
               <p>
-                I am currently working on private projects and am looking for an opportunity as junior full-stack developer and consultant based in Berlin. In my previous roles, I followed the Agile Scrum methodology and handled a wide range of tasks, from gathering requirements in client meetings to implementing software solutions.
+                As a Junior Developer working on ERP systems, I contribute to building and maintaining reliable backend solutions that support real-world business operations. I’m continuously learning and working with the Progress OpenEdge (ABL) tech stack, strengthening my understanding of scalable architectures and clean code practices.
               </p>
               <p>
-                My goal is to develop user-friendly and efficient solutions that align with customer needs. I invite you to explore my projects, each a chapter in my coding journey, built with dedication and enthusiasm.
+                I enjoy turning complex business requirements into structured, maintainable solutions that create measurable impact. I invite you to explore my projects, each a chapter in my coding journey, built with dedication and enthusiasm.
               </p>
             </div>
           </section>
